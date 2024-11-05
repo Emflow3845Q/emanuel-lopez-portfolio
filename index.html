@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio | Mariana Arias Desarrolladora Web">
+    <meta name="robots" content="index,follow">
+
+    <title>Emanuel López | Portafolio</title>
+
+    <!-- Librerías -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Hojas de estilo -->
+    <link rel="stylesheet" href="./assets/stylesheet/loader.css">
+    <link rel="stylesheet" href="./assets/stylesheet/index.css">
+    <link rel="stylesheet" href="./assets/stylesheet/tablet.css" media="screen and (min-width: 760px)">
+    <link rel="stylesheet" href="./assets/stylesheet/desktop.css" media="screen and (min-width: 980px)">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/ae0fd6f99f.js" crossorigin="anonymous"></script>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container--loader">
+        <div class="loader"></div>
+    </div>
+
+    <header class="header">
+        <img src="./assets/images/logo.png" alt="Logo Portafolio" class="logo__header">
+
+        <nav class="nav_menu not-active">
+            <a href="#home" class="active">HOME</a>
+            <a href="#sobreMi" data-section="menu" data-value="item2">SOBRE MÍ</a>
+            <a href="#habilidades" data-section="menu" data-value="item3">HABILIDADES</a>
+            <a href="#experiencia" data-section="menu" data-value="item4">EXPERIENCIA</a>
+            <a href="#proyectos" data-section="menu" data-value="item5">PROYECTOS</a>
+            <a href="#contacto" data-section="menu" data-value="item6">CONTACTO</a>            
+
+            <!-- Idiomas de la página -->
+            <div id="flags" class="flags">
+                <div class="flags__item" data-language="es">
+                    <img src="./assets/images/icon-spain.png" alt="Español/Spain">
+                </div>
+                <div class="flags__item" data-language="en">
+                    <img src="./assets/images/icon-en.png" alt="Inglés/English">
+                </div>
+            </div>
+        </nav>
+
+        <div id="button" class="btn not-active">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <main>
+        <!-- Home -->
+        <section class="home" id="home">
+            <picture class="container_image-home" data-aos="zoom-in">
+                <img class="image_home" src="./assets/images/programing.gif" alt="Ilustración mujer y plantas">
+            </picture>
+            
+            <div class="home_info">
+                <div class="container_text-info">
+                    <p class="home_text-1" data-section="home" data-value="home_text-1">Hola! Soy</p>
+                    <p class="home_text-2">Emanuel López</p>
+                </div>
+
+                <div>
+                    <p class="home_text-3 text-type" data-section="home" data-value="home_text-3">Desarrollador Full Stack</p>
+                </div>
+
+                <div class="container_parrafo-info">
+                    <!-- <p data-section="home" data-value="parrafo-info"></p> -->
+                </div>
+
+                <div class="container_button">
+                    <!-- <a href="" target="_blank">
+                        <button class="cv_button" data-section="home" data-value="cv_button">Descargar CV</button>
+                    </a> -->
+                    <a href="#contacto">
+                        <button class="contact_button" data-section="home" data-value="contact_button">Contacto</button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="links">
+                <a href="https://www.linkedin.com/in/emanuel-l%C3%B3pez-490899308/" target="_blank">
+                    <img src="./assets/images/icon-linkedin.png" alt="LinkedIn" class="icon-linkedin">
+                </a>
+                <a href="https://github.com/Emflow3845Q" target="_blank">
+                    <img src="./assets/images/icon-github.png" alt="GitHub" class="icon-github">
+                </a>
+                <a href="https://www.instagram.com/emanurango/" target="_blank">
+                    <img src="./assets/images/icon-instagram.png" alt="Instagram" class="icon-instagram">
+                </a>
+            </div>
+        </section>
+
+        <!-- Acerde De -->
+        <section class="acerdeDe" id="acerdeDe">
+            <!-- <h1 data-section="sobre-mi" data-value="title" data-aos="fade-up">Acerca de</h1> -->
+
+            <div class="container_content-acerdeDe" data-aos="fade-right">
+                <div class="container_texto-acerdeDe">
+                    <!-- <span class="title_acerdeDe"></span> -->
+                    <span class="texto_acerdeDe" data-section="sobre-mi" data-value="texto_acerdeDe">Soy un desarrollador especializado en trabajo en equipo y en soluciones tecnológicas efectivas. Tengo experiencia tanto en colaboración como en trabajo individual. Mi enfoque se centra en gestores de contenido como WordPress y Joomla, así como en frameworks como Laravel. Además, soy experto en resolver problemas informáticos y en configuración de correos electrónicos. Me apasiona crear sitios web con una experiencia de usuario excepcional.
+                    </span>
+                </div>
+    
+                <picture class="container_image-acerdeDe">
+                    <img class="image_acerdeDe" src="./assets/images/programing-text.gif" alt="Ilustración mujer y café">
+                </picture>
+            </div>
+        </section>
+
+        <!-- Habilidades -->
+        <section class="habilidades" id="habilidades">
+            <h1 data-section="habilidades" data-value="title" data-aos="fade-up">COMPETENCIAS</h1>
+
+            <!-- <img src="" alt="Decoración puntos" class="puntos1-habilidades">
+            <img src="" alt="Decoración puntos" class="puntos2-habilidades"> -->
+
+            <div class="cards_container--habilidades">
+                <div class="cards--habilidades" data-aos="fade-up" data-aos-duration="500">
+                    <img src="./assets/images/html.svg" alt="HTML">
+                    <p>HTML 5</p>
+                </div>
+                
+                <div class="cards--habilidades" data-aos="fade-up" data-aos-duration="700">
+                    <img src="./assets/images/css.svg" alt="CSS">
+                    <p>CSS 3</p>
+                </div>
+
+                <div class="cards--habilidades" data-aos="fade-up" data-aos-duration="900">
+                    <img src="./assets/images/javascript.svg" alt="JavaScript">
+                    <p>JavaScript</p>
+                </div>
+
+                <div class="cards--habilidades" data-aos="fade-up" data-aos-duration="1100">
+                    <img src="./assets/images/php.svg" alt="Trello">
+                    <p>PHP</p>
+                </div>
+
+                <div class="cards--habilidades" data-aos="fade-up" data-aos-duration="1100">
+                    <img src="./assets/images/lua.svg" alt="Lua">
+                    <p>Lua</p>
+                </div>
+
+                <div class="cards--habilidades" data-aos="fade-up" data-aos-duration="1100">
+                    <img src="./assets/images/python.svg" alt="Python">
+                    <p>Python</p>
+                </div>
+
+                <div class="cards--habilidades" data-aos="fade-up" data-aos-duration="1100">
+                    <img src="./assets/images/react.svg" alt="React">
+                    <p>React</p>
+                </div>
+
+                <div class="cards--habilidades" data-aos="fade-up" data-aos-duration="500">
+                    <img src="./assets/images/icon-tailwind.png" alt="Tailwind">
+                    <p>Tailwind</p>
+                </div>
+
+                <div class="cards--habilidades" data-aos="fade-up" data-aos-duration="500">
+                    <img src="./assets/images/vite.svg" alt="Vite">
+                    <p>Vite</p>
+                </div>
+
+                <div class="cards--habilidades" data-aos="fade-up" data-aos-duration="700">
+                    <img src="./assets/images/icon-git.png" alt="Git">
+                    <p>Git</p>
+                </div>
+                
+                <div class="cards--habilidades" data-aos="fade-up" data-aos-duration="1100">
+                    <img src="./assets/images/icon-trello.png" alt="Trello">
+                    <p>Plesk</p>
+                </div>
+
+                <div class="cards--habilidades" data-aos="fade-up" data-aos-duration="1100">
+                    <img src="./assets/images/cpanel.svg" alt="cPanel">
+                    <p>cPanel</p>
+                </div>
+
+                <div class="cards--habilidades" data-aos="fade-up" data-aos-duration="1100">
+                    <img src="./assets/images/wordpress.svg" alt="WordPress">
+                    <p>WordPress</p>
+                </div>
+
+                <div class="cards--habilidades" data-aos="fade-up" data-aos-duration="1100">
+                    <img src="./assets/images/shopify.svg" alt="Shopify">
+                    <p>Shopify</p>
+                </div>
+
+                <div class="cards--habilidades" data-aos="fade-up" data-aos-duration="900">
+                    <img src="./assets/images/icon-github-hab.png" alt="GitHub">
+                    <p>Github</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experiencia -->
+        <section class="experiencia" id="experiencia">
+            <h1 data-section="experiencia" data-value="title" data-aos="fade-up">EXPERIENCIA</h1>
+
+            <div class="cards_container--experiencia">
+                <div class="cards--experiencia" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
+                    <img class="logo-unal" src="./assets/images/logo-latinoamericahosting.avif" alt="Logo - Latinoamérica Hosting">
+                    <div class="container_texto--experiencia">
+                        <p data-section="experiencia" data-value="experiencia1">Resolución de Problemas Técnicos</p>
+                        <p data-section="experiencia" data-value="tiempo-experiencia1">Agosto 2022 / Abril 2024</p>
+                    </div>
+                </div>
+
+                <div class="cards--experiencia" data-aos="fade-up" data-aos-duration="500">
+                    <img class="logo-one" src="./assets/images/logo-varishop.png" alt="Logo - Varishop">
+                    <div class="container_texto--experiencia">
+                        <p data-section="experiencia" data-value="experiencia2">E-Commerce</p>
+                        <p data-section="experiencia" data-value="tiempo-experiencia2">Abril 2024 / Mayo 2024</p>
+                    </div>
+                </div>
+
+                <div class="cards--experiencia" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
+                    <img class="logo-sena" src="./assets/images/logo-vestel.png" alt="Logo - Vestel">
+                    <div class="container_texto--experiencia">
+                        <p data-section="experiencia" data-value="experiencia3">Desarrollador Full Stack</p>
+                        <p>2024 / Actualmente</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proyectos -->
+        <section class="proyectos" id="proyectos">
+            <h1 data-section="proyectos" data-value="title" data-aos="fade-up">PROYECTOS</h1>
+
+            <!-- <img src="" alt="Decoración puntos" class="puntos1-proyectos">
+            <img src="" alt="Decoración puntos" class="puntos2-proyectos"> -->
+
+            <div class="cards_container--proyectos">
+                <div class="cards--proyectos card_JuegoAhorcado" data-aos="zoom-in-up" data-aos-anchor-placement="center-bottom">
+                    <div class="container_imgCard--proyectos">
+                        <img src="./assets/images/comuna.png" alt="Proyecto: Juego del ahorcado">
+                    </div>
+
+                    <div class="container_textCard--proyectos">
+                        <h2 data-section="proyectos" data-value="title-proyecto1">Comuna Latín Vice RP</h2>
+                        <p data-section="proyectos" data-value="info-proyecto1">Página web para el servidor Comuna Latín Vice RP, diseñada para ofrecer a los jugadores acceso rápido a reglas, noticias y recursos en un entorno intuitivo y compatible en todos los dispositivos.</p>
+                    </div>                                                       
+
+                    <div class="container_btn--proyectos">
+                        <a href="https://comunalatinvicerp.netlify.app/" target="_blank">
+                            <button class="btn_demo">
+                                <img src="./assets/images/icon-demoProyecto.png" alt="Demostración">DEMO
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cards--proyectos card_portafolio" data-aos="zoom-in-up" data-aos-anchor-placement="center-bottom">
+                    <div class="container_imgCard--proyectos">
+                        <img src="./assets/images/cap-portafolio.png" alt="Proyecto: Portafolio">
+                    </div>
+
+                    <div class="container_textCard--proyectos text-portafolio">
+                        <h2 data-section="proyectos" data-value="title-proyecto2">Emanuel López | Portafolio</h2>
+                        <p data-section="proyectos" data-value="info-proyecto2">Portafolio digital que ofrece una plataforma interactiva para exhibir una variedad de trabajos creativos y proyectos, permitiendo presentar su arte, diseño y más de manera única y atractiva.</p>
+                    </div>
+
+                    <div class="container_btn--proyectos">
+                        <a href="#" target="_blank">
+                            <button class="btn_demo">
+                                <img src="./assets/images/icon-demoProyecto.png" alt="Demostración">DEMO
+                            </button>
+                        </a>
+
+                        <!-- <a href="#" target="_blank">
+                            <button class="btn_repo">
+                                <img src="./assets/images/icon-githubProyecto.png" alt="Repositorio de github">REPO
+                            </button>
+                        </a> -->
+                    </div>
+                </div>
+
+                <div class="cards--proyectos card_encriptador" data-aos="zoom-in-up" data-aos-anchor-placement="center-bottom">
+                    <div class="container_imgCard--proyectos">
+                        <img src="./assets/images/varishop.png" alt="Proyecto: Encriptador">
+                    </div>
+
+                    <div class="container_textCard--proyectos">
+                        <h2 data-section="proyectos" data-value="title-proyecto3">Varishop</h2>
+                        <p data-section="proyectos" data-value="info-proyecto3">Varishop, el ecommerce en Shopify que transformará tu experiencia de compra en línea. Una muestra impecable de tienda virtual moderna y eficiente.</p>
+                    </div>
+
+                    <div class="container_btn--proyectos">
+                        <!-- <a href="" target="_blank">
+                            <button class="btn_demo">
+                                <img src="./assets/images/icon-demoProyecto.png" alt="Demostración">DEMO
+                            </button>
+                        </a> -->
+
+                        <a href="#" target="_blank">
+                            <button class="btn_repo">
+                                <img src="./assets/images/icon-githubProyecto.png" alt="Repositorio de github">REPO
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div> 
+        </section>
+
+<!-- Contacto -->
+<section class="contacto" id="contacto">
+    <h1 data-section="contacto" data-value="title" data-aos="fade-up">CONTÁCTANOS</h1>
+
+    <div class="container_box--contacto" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+        <div class="container--contacto">
+            <div class="container_text--contacto">
+                <p data-section="contacto" data-value="text">
+                    ¿Tienes alguna pregunta o comentario? Completa el formulario y nos pondremos en contacto contigo lo antes posible.
+                </p>
+            </div>
+
+            <form id="form" class="form-contact" name="contacto-portafolio" netlify>
+                <div class="form-group">
+                    <input id="nombre" type="text" name="name" placeholder="Nombre completo" required>
+                    <input id="email" type="email" name="email" placeholder="Correo electrónico" required>
+                </div>
+                <input id="asunto" type="text" name="affair" placeholder="Asunto" required>
+                <textarea id="mensaje" cols="20" rows="4" name="message" placeholder="Escribe tu mensaje aquí..." required></textarea>
+
+                <div class="btn_form--contacto">
+                    <button id="btn-enviar" type="submit" data-section="contacto" data-value="btn-enviar">Enviar mensaje</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+    </main>
+
+    <footer>
+        <div class="contianer--footer">
+            <div class="container_redes-footer">
+                <a href="https://www.linkedin.com/in/emanuel-l%C3%B3pez-490899308/" target="_blank">
+                    <img src="./assets/images/icon-linkedin.png" alt="LinkedIn" class="icon-linkedin">
+                </a>
+                <a href="https://github.com/Emflow3845Q" target="_blank">
+                    <img src="./assets/images/icon-github.png" alt="GitHub" class="icon-github">
+                </a>
+                <a href="https://www.instagram.com/emanurango/" target="_blank">
+                    <img src="./assets/images/icon-instagram.png" alt="Instagram" class="icon-instagram">
+                </a>
+            </div>
+
+            <div class="container_text--footer">
+                <span>Copyright © | Coded with</span>
+                <span>by</span>
+                <span>Emanuel López Arango</span>
+            </div>
+        </div>
+    </footer>
+
+    <div class="go-top-container">
+        <div class="go-top-button">
+            <i class="fas fa-chevron-up"></i>
+        </div>
+    </div>
+
+    <!-- Archivo Js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Librería de animaciones -->
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- Mi script -->
+    <script src="./script.js"></script>
+</body>
+</html>

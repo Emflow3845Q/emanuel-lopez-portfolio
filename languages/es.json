@@ -1,0 +1,42 @@
+{
+    "menu": {
+        "item2": "ACERCA DE",
+        "item3": "COMPETENCIAS",
+        "item4": "EXPERIENCIA",
+        "item5": "PROYECTOS",
+        "item6": "CONTACTO"
+    },
+    "home": {
+        "home_text-1": "¡SALUDOS! SOY",
+        "home_text-3": "DESARROLLADOR FULL STACK",
+        "contact_button": "CONTACTO"
+    },
+    "sobre-mi": {
+        "texto_acerdeDe": "Soy un desarrollador especializado en la colaboración en equipo y en la implementación de soluciones tecnológicas efectivas. Poseo experiencia tanto en trabajo colaborativo como en labores individuales. Mi enfoque se centra en gestores de contenido como WordPress y Joomla, así como en frameworks como Laravel. Además, soy experto en la resolución de problemas informáticos y en la configuración de correos electrónicos. Me apasiona la creación de sitios web que ofrezcan una experiencia de usuario excepcional."
+    },
+    "habilidades": {
+        "title": "COMPETENCIAS"
+    },
+    "experiencia": {
+        "title": "EXPERIENCIA",
+        "experiencia1": "RESOLUCIÓN DE PROBLEMAS TÉCNICOS",
+        "tiempo-experiencia1": "AGOSTO 2022 / ABRIL 2024",
+        "experiencia2": "COMERCIO ELECTRÓNICO",
+        "tiempo-experiencia2": "ABRIL 2024 / MAYO 2024",
+        "experiencia3": "DESARROLLADOR FULL STACK"
+    },
+    "proyectos": {
+        "title": "PROYECTOS",
+        "title-proyecto1": "COMUNA LATÍN VICE RP",
+        "info-proyecto1": "Página web para el servidor Comuna Latín Vice RP, diseñada para proporcionar a los jugadores un acceso rápido a reglas, noticias y recursos en un entorno intuitivo y compatible con todos los dispositivos.",
+        "title-proyecto2": "EMANUEL LÓPEZ | PORTAFOLIO",
+        "info-proyecto2": "Portafolio digital que ofrece una plataforma interactiva para exhibir una variedad de trabajos creativos y proyectos, permitiendo presentar su arte, diseño y más de manera única y atractiva.",
+        "title-proyecto3": "VARISHOP",
+        "info-proyecto3": "Varishop, el comercio electrónico en Shopify que transformará su experiencia de compra en línea. Una muestra impecable de una tienda virtual moderna y eficiente."
+    },
+    "contacto": {
+        "title": "CONTACTO",
+        "text": "Por favor, complete el siguiente formulario y me pondré en contacto con usted a la brevedad posible.",
+        "btn-enviar": "Enviar mensaje"
+    }
+}
