@@ -831,10 +831,20 @@ img.logo-sena {
         font-size: 1.2rem;
     }
 
+    .form-contact {
+        width: 100%;
+    }
+
+    .form-group {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
     .form-contact input,
     .form-contact textarea {
         font-size: 1.2rem;
         padding: 0.7rem;
+        width: 100%;
     }
 
     .btn_form--contacto button {
@@ -842,6 +852,7 @@ img.logo-sena {
         padding: 0.5rem 1.2rem;
     }
 }
+
 
 /* Footer */
 
