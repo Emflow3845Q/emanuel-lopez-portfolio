@@ -1,5 +1,6 @@
 {
     "menu": {
+        "item1": "HOME",
         "item2": "ABOUT",
         "item3": "SKILLS",
         "item4": "EXPERIENCE",
@@ -14,7 +15,7 @@
     "sobre-mi": {
         "texto_acerdeDe": "I am a developer specialized in teamwork and implementing effective technological solutions. I have experience in both collaborative work and individual tasks. My focus is on content management systems like WordPress and Joomla, as well as frameworks like Laravel. Additionally, I am an expert in troubleshooting and configuring email. I am passionate about creating websites that offer an exceptional user experience."
     },
-    "habilidades": {
+    "Competencias": {
         "title": "SKILLS"
     },
     "experiencia": {

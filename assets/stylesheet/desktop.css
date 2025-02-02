@@ -207,19 +207,19 @@ div.btn {
     line-height: 2.8rem;
 }
 
-/* Habilidades */
+/* Competencias */
 
-.habilidades {
+.Competencias {
     padding-bottom: 8rem;
     position: relative;
 }
 
-.habilidades h1 {
+.Competencias h1 {
     padding-top: 8rem;
     font-size: 3rem;
 }
 
-.puntos1-habilidades {
+.puntos1-Competencias {
     display: inline;
     position: absolute;
     width: 6rem;
@@ -227,27 +227,27 @@ div.btn {
     background-attachment: fixed;
 }
 
-.puntos2-habilidades {
+.puntos2-Competencias {
     display: inline;
     position: absolute;
     width: 6rem;
     margin: 0 0 0 76%;
 }
 
-.cards_container--habilidades {
+.cards_container--Competencias {
     grid-template-columns: 13rem 13rem 13rem 13rem;
     grid-template-rows: 14rem 14rem;
     padding: 0;
     margin-top: 2rem;
 }
 
-.cards--habilidades:hover {
+.cards--Competencias:hover {
     filter: saturate(100%);
     border: 1px solid var(--beaver);
     transition: all 1s;
 }
 
-.cards--habilidades p {
+.cards--Competencias p {
     font-size: 1.6rem;
     margin-top: .8rem;
 }

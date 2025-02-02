@@ -1,5 +1,6 @@
 {
     "menu": {
+        "item1": "INICIO",
         "item2": "ACERCA DE",
         "item3": "COMPETENCIAS",
         "item4": "EXPERIENCIA",
@@ -14,7 +15,7 @@
     "sobre-mi": {
         "texto_acerdeDe": "Soy un desarrollador especializado en la colaboración en equipo y en la implementación de soluciones tecnológicas efectivas. Poseo experiencia tanto en trabajo colaborativo como en labores individuales. Mi enfoque se centra en gestores de contenido como WordPress y Joomla, así como en frameworks como Laravel. Además, soy experto en la resolución de problemas informáticos y en la configuración de correos electrónicos. Me apasiona la creación de sitios web que ofrezcan una experiencia de usuario excepcional."
     },
-    "habilidades": {
+    "Competencias": {
         "title": "COMPETENCIAS"
     },
     "experiencia": {
