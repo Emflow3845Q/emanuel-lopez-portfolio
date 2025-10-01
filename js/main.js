@@ -5,6 +5,10 @@ const inputEmail = document.querySelector('#email');
 const flagsElement = document.getElementById('flags');
 const textsToChange = document.querySelectorAll('[data-section]');
 
+// Variable global para el idioma actual y textos
+let currentLanguage = 'es';
+let currentTexts = null;
+
 /* ===== Loader =====*/
 window.addEventListener('load', () => {
     const contenedorLoader = document.querySelector('.container--loader');
@@ -36,19 +40,69 @@ btn.addEventListener('click', function() {
 
 /*===== Cambio de idioma =====*/
 const changeLanguage = async language => {
-    const requestJson = await fetch(`./languages/${language}.json`);
-    const texts = await requestJson.json();
+    try {
+        const requestJson = await fetch(`./data/${language}.json`);
+        const texts = await requestJson.json();
+        currentTexts = texts;
+        currentLanguage = language;
 
+        // Actualizar todos los textos con data-section y data-value
+        updateAllTexts(texts);
+        
+        console.log(`Idioma cambiado a: ${language}`);
+        
+    } catch (error) {
+        console.error('Error cambiando idioma:', error);
+    }
+}
+
+// Función para actualizar TODOS los textos
+function updateAllTexts(texts) {
     for(const textToChange of textsToChange) {
         const section = textToChange.dataset.section;
         const value = textToChange.dataset.value;
 
-        textToChange.innerHTML = texts[section][value];
+        if (texts[section] && texts[section][value]) {
+            textToChange.innerHTML = texts[section][value];
+        }
+    }
+
+    // Actualizar textos de proyectos dinámicos
+    updateProjectsTexts(texts);
+}
+
+// Función para actualizar textos de proyectos
+function updateProjectsTexts(texts) {
+    const projectTitles = document.querySelectorAll('[data-section="proyectos"][data-value^="title-proyecto"]');
+    const projectDescriptions = document.querySelectorAll('[data-section="proyectos"][data-value^="info-proyecto"]');
+    
+    projectTitles.forEach(title => {
+        const value = title.dataset.value;
+        if (texts.proyectos && texts.proyectos[value]) {
+            title.innerHTML = texts.proyectos[value];
+        }
+    });
+    
+    projectDescriptions.forEach(desc => {
+        const value = desc.dataset.value;
+        if (texts.proyectos && texts.proyectos[value]) {
+            desc.innerHTML = texts.proyectos[value];
+        }
+    });
+}
+
+// Función para forzar actualización de textos después de que los proyectos se carguen
+function refreshTexts() {
+    if (currentTexts) {
+        updateAllTexts(currentTexts);
     }
 }
 
 flagsElement.addEventListener('click', (e) => {
-    changeLanguage(e.target.parentElement.dataset.language);
+    const language = e.target.parentElement.dataset.language;
+    if (language) {
+        changeLanguage(language);
+    }
 })
 
 /*===== class active por secciones =====*/
@@ -85,8 +139,21 @@ document.querySelector('.go-top-container').addEventListener('click', () => {
     });
 });
 
-
 /*===== Clic derecho =====*/
 document.addEventListener('contextmenu', function(e) {
     e.preventDefault();
 });
+
+// Cargar idioma por defecto al iniciar y sincronizar con proyectos
+document.addEventListener('DOMContentLoaded', async () => {
+    // Cargar idioma primero
+    await changeLanguage('es');
+    
+    // Esperar a que los proyectos se rendericen y luego actualizar textos
+    setTimeout(() => {
+        refreshTexts();
+    }, 100);
+});
+
+// Hacer la función refreshTexts disponible globalmente
+window.refreshTexts = refreshTexts;

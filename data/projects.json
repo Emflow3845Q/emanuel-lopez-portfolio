@@ -1,0 +1,149 @@
+{
+  "proyectos": [
+    {
+      "id": 1,
+      "data_value_title": "title-proyecto1",
+      "data_value_info": "info-proyecto1",
+      "imagen": "./assets/images/comuna.png",
+      "demoUrl": "https://unique-horse-9e0145.netlify.app"
+    },
+    {
+      "id": 2,
+      "data_value_title": "title-proyecto2",
+      "data_value_info": "info-proyecto2",
+      "imagen": "./assets/images/cap-portafolio.png",
+      "demoUrl": null,
+      "technologies": [
+        "HTML5",
+        "CSS3",
+        "JavaScript"
+      ]
+    },
+    {
+      "id": 3,
+      "data_value_title": "title-proyecto3",
+      "data_value_info": "info-proyecto3",
+      "imagen": "./assets/images/varishop.png",
+      "demoUrl": null,
+      "technologies": [
+        "Shopify"
+      ]
+    },
+    {
+      "id": 4,
+      "data_value_title": "title-proyecto4",
+      "data_value_info": "info-proyecto4",
+      "imagen": "./assets/images/varishop.png",
+      "demoUrl": "https://neuradevsoftware.com/sistema-rifas",
+      "technologies": [
+        "React",
+        "Node.js (Express)",
+        "MongoDB",
+        "Tailwind CSS",
+        "Twilio"
+      ]
+    },
+    {
+      "id": 5,
+      "data_value_title": "title-proyecto5",
+      "data_value_info": "info-proyecto5",
+      "imagen": "./assets/images/varishop.png",
+      "demoUrl": "https://molicacoffee.com",
+      "technologies": [
+        "WordPress",
+        "WooCommerce",
+        "Elementor",
+        "Wompi"
+      ]
+    },
+    {
+      "id": 6,
+      "data_value_title": "title-proyecto6",
+      "data_value_info": "info-proyecto6",
+      "imagen": "./assets/images/varishop.png",
+      "demoUrl": "https://ejeclinicadental.com/es_co",
+      "technologies": [
+        "WordPress",
+        "WooCommerce",
+        "Elementor",
+        "PayU"
+      ]
+    },
+    {
+      "id": 7,
+      "data_value_title": "title-proyecto7",
+      "data_value_info": "info-proyecto7",
+      "imagen": "./assets/images/varishop.png",
+      "demoUrl": "https://ejeclinicadental.com/es_co",
+      "technologies": [
+        "Tiendanube",
+        "ePayco"
+      ]
+    },
+    {
+      "id": 8,
+      "data_value_title": "title-proyecto8",
+      "data_value_info": "info-proyecto8",
+      "imagen": "./assets/images/varishop.png",
+      "demoUrl": "https://ejeclinicadental.com/es_co",
+      "technologies": [
+        "HTML5",
+        "CSS3",
+        "JavaScript"
+      ]
+    },
+    {
+      "id": 9,
+      "data_value_title": "title-proyecto9",
+      "data_value_info": "info-proyecto9",
+      "imagen": "./assets/images/varishop.png",
+      "demoUrl": "https://ejeclinicadental.com/es_co",
+      "technologies": [
+        "React",
+        "Node.js (Express)",
+        "Tailwind CSS",
+        "PayU"
+      ]
+    },
+    {
+      "id": 10,
+      "data_value_title": "title-proyecto10",
+      "data_value_info": "info-proyecto10",
+      "imagen": "./assets/images/varishop.png",
+      "demoUrl": "https://ejeclinicadental.com/es_co"
+    },
+    {
+      "id": 11,
+      "data_value_title": "title-proyecto11",
+      "data_value_info": "info-proyecto11",
+      "imagen": "./assets/images/varishop.png",
+      "demoUrl": "https://ejeclinicadental.com/es_co",
+      "technologies": [
+        "WordPress",
+        "Elementor"
+      ]
+    },
+    {
+      "id": 12,
+      "data_value_title": "title-proyecto12",
+      "data_value_info": "info-proyecto12",
+      "imagen": "./assets/images/varishop.png",
+      "demoUrl": null,
+      "technologies": [
+        "WordPress",
+        "Elementor"
+      ]
+    },
+    {
+      "id": 13,
+      "data_value_title": "title-proyecto13",
+      "data_value_info": "info-proyecto13",
+      "imagen": "./assets/images/varishop.png",
+      "demoUrl": "https://clientes.neuradevsoftware.com",
+      "technologies": [
+        "WordPress",
+        "Elementor"
+      ]
+    }
+  ]
+}

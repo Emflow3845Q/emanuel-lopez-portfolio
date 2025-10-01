@@ -2,14 +2,14 @@
     "menu": {
         "item1": "HOME",
         "item2": "ABOUT",
-        "item3": "SKILLS",
+        "item3": "SKILLS", 
         "item4": "EXPERIENCE",
         "item5": "PROJECTS",
         "item6": "CONTACT"
     },
     "home": {
         "home_text-1": "HELLO! I AM",
-        "home_text-3": "FULL STACK DEVELOPER",
+        "home_text-3": "FULL STACK DEVELOPER", 
         "contact_button": "CONTACT"
     },
     "sobre-mi": {
@@ -22,7 +22,7 @@
         "title": "EXPERIENCE",
         "experiencia1": "TECHNICAL PROBLEM SOLVING",
         "tiempo-experiencia1": "AUGUST 2022 / APRIL 2024",
-        "experiencia2": "E-COMMERCE",
+        "experiencia2": "E-COMMERCE", 
         "tiempo-experiencia2": "APRIL 2024 / MAY 2024",
         "experiencia3": "FULL STACK DEVELOPER"
     },
