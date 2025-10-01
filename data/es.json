@@ -10,6 +10,7 @@
     "home": {
         "home_text-1": "¡SALUDOS! SOY",
         "home_text-3": "DESARROLLADOR FULL STACK",
+        "cv_button": "DESCARGAR CV",
         "contact_button": "CONTACTO"
     },
     "sobre-mi": {
@@ -39,7 +40,7 @@
         "title-proyecto5": "Molica Coffee",
         "info-proyecto5": "Un ecommerce desarrollado en WordPress con WooCommerce para la venta de café. Una tienda online moderna y personalizable, con catálogo dinámico, carrito de compras y un proceso de pago optimizado para ofrecer una experiencia sencilla y atractiva.",
         "title-proyecto6": "Clinica Eje Dental",
-        "info-proyecto6": "Varishop, el ecommerce en Shopify que transformará tu experiencia de compra en línea. Una muestra impecable de tienda virtual moderna y eficiente.",
+        "info-proyecto6": "Sitio web para clínica dental con diseño profesional, información de servicios, equipo médico y formulario de contacto para consultas y citas.",
         "title-proyecto7": "Tiendolia",
         "info-proyecto7": "Un ecommerce desarrollado en Tiendanube para la venta de celulares, computadores, teclados y otros productos tecnológicos. Una tienda online moderna y funcional, diseñada para ofrecer una experiencia de compra práctica y confiable.",
         "title-proyecto8": "Xtrategic — Marca personal",

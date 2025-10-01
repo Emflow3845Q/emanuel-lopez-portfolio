@@ -141,8 +141,10 @@
       "imagen": "./assets/images/varishop.png",
       "demoUrl": "https://clientes.neuradevsoftware.com",
       "technologies": [
-        "WordPress",
-        "Elementor"
+        "React",
+        "Node.js (Express)",
+        "MongoDB",
+        "Tailwind CSS"
       ]
     }
   ]

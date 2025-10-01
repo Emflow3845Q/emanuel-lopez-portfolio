@@ -10,6 +10,7 @@
     "home": {
         "home_text-1": "HELLO! I AM",
         "home_text-3": "FULL STACK DEVELOPER", 
+        "cv_button": "DOWNLOAD CV",
         "contact_button": "CONTACT"
     },
     "sobre-mi": {
@@ -33,7 +34,27 @@
         "title-proyecto2": "EMANUEL LÓPEZ | PORTFOLIO",
         "info-proyecto2": "Digital portfolio that offers an interactive platform to showcase a variety of creative works and projects, allowing for a unique and engaging presentation of art, design, and more.",
         "title-proyecto3": "VARISHOP",
-        "info-proyecto3": "Varishop, the e-commerce platform on Shopify that will transform your online shopping experience. A seamless example of a modern and efficient virtual store."
+        "info-proyecto3": "Varishop, the e-commerce platform on Shopify that will transform your online shopping experience. A seamless example of a modern and efficient virtual store.",
+        "title-proyecto4": "Raffle System - NeuraDev Software",
+        "info-proyecto4": "A web platform for managing online raffles with admin panel, custom landing page, real-time reservation verification, and automatic WhatsApp notifications.",
+        "title-proyecto5": "Molica Coffee",
+        "info-proyecto5": "An ecommerce developed in WordPress with WooCommerce for coffee sales. A modern and customizable online store with dynamic catalog, shopping cart, and optimized checkout process for a simple and attractive experience.",
+        "title-proyecto6": "Eje Dental Clinic",
+        "info-proyecto6": "Website for dental clinic with professional design, service information, medical team details, and contact form for inquiries and appointments.",
+        "title-proyecto7": "Tiendolia",
+        "info-proyecto7": "An ecommerce developed on Tiendanube for selling phones, computers, keyboards, and other tech products. A modern and functional online store designed to provide a practical and reliable shopping experience.",
+        "title-proyecto8": "Xtrategic — Personal Brand",
+        "info-proyecto8": "Personal brand website for Luis, founder of Xtrategic and digital consultant. A professional space showcasing his methodology, digital strategy services, and lead generation expertise.",
+        "title-proyecto9": "Otto",
+        "info-proyecto9": "A corporate ecommerce developed with custom code, integrating PayU payment gateway and custom design. Combines online store functionalities with an institutional structure tailored to client needs.",
+        "title-proyecto10": "NeuraDev Software",
+        "info-proyecto10": "Corporate website developed for NeuraDev Software, designed to communicate their web development, mobile applications, and technology consulting services. A project focused on conveying solidity, modernity, and professional digital presence.",
+        "title-proyecto11": "APS Atlantic Pacific Standard",
+        "info-proyecto11": "Corporate website developed for APS Atlantic Pacific Standard, general contractor. The project renewed their digital presence, highlighting comprehensive services, projects, certifications, and the company's commitment to clients, in collaboration with Smart PPC Bidding.",
+        "title-proyecto12": "Landing Page – Thesis Community",
+        "info-proyecto12": "Landing page developed for the Latin American Thesis Community, created from scratch to optimize design, structure, and performance. The project aimed to enhance the recruitment of academic advisors within the community.",
+        "title-proyecto13": "Client System – NeuraDev Software (In development)",
+        "info-proyecto13": "Management system developed for NeuraDev Software that allows registering clients, generating invoices, assigning projects and developers, plus offering support and centralized administration. A comprehensive platform to optimize client relationships and internal management."
     },
     "contacto": {
         "title": "CONTACT",
