@@ -4,14 +4,14 @@
       "id": 1,
       "data_value_title": "title-proyecto1",
       "data_value_info": "info-proyecto1",
-      "imagen": "./assets/images/comuna.png",
-      "demoUrl": "https://unique-horse-9e0145.netlify.app"
+      "imagen": "./assets/img/projects/comunalatinvice.webp ",
+      "demoUrl": "https://comunalatinvicerp.neuradevsoftware.com"
     },
     {
       "id": 2,
       "data_value_title": "title-proyecto2",
       "data_value_info": "info-proyecto2",
-      "imagen": "./assets/images/cap-portafolio.png",
+      "imagen": "./assets/img/projects/portafolio.webp",
       "demoUrl": null,
       "technologies": [
         "HTML5",
@@ -23,7 +23,7 @@
       "id": 3,
       "data_value_title": "title-proyecto3",
       "data_value_info": "info-proyecto3",
-      "imagen": "./assets/images/varishop.png",
+      "imagen": "./assets/img/projects/varishop.webp",
       "demoUrl": null,
       "technologies": [
         "Shopify"
@@ -33,8 +33,8 @@
       "id": 4,
       "data_value_title": "title-proyecto4",
       "data_value_info": "info-proyecto4",
-      "imagen": "./assets/images/varishop.png",
-      "demoUrl": "https://neuradevsoftware.com/sistema-rifas",
+      "imagen": "./assets/img/projects",
+      "demoUrl": "https://demorifas.neuradevsoftware.com",
       "technologies": [
         "React",
         "Node.js (Express)",
@@ -47,7 +47,7 @@
       "id": 5,
       "data_value_title": "title-proyecto5",
       "data_value_info": "info-proyecto5",
-      "imagen": "./assets/images/varishop.png",
+      "imagen": "./assets/img/projects/molicacoffee.webp",
       "demoUrl": "https://molicacoffee.com",
       "technologies": [
         "WordPress",
@@ -60,7 +60,7 @@
       "id": 6,
       "data_value_title": "title-proyecto6",
       "data_value_info": "info-proyecto6",
-      "imagen": "./assets/images/varishop.png",
+      "imagen": "./assets/img/projects/clinicaejedental.webp",
       "demoUrl": "https://ejeclinicadental.com/es_co",
       "technologies": [
         "WordPress",
@@ -73,8 +73,8 @@
       "id": 7,
       "data_value_title": "title-proyecto7",
       "data_value_info": "info-proyecto7",
-      "imagen": "./assets/images/varishop.png",
-      "demoUrl": "https://ejeclinicadental.com/es_co",
+      "imagen": "./assets/img/projects/tiendolia.webp ",
+      "demoUrl": "https://tiendolia.mitiendanube.com",
       "technologies": [
         "Tiendanube",
         "ePayco"
@@ -84,7 +84,7 @@
       "id": 8,
       "data_value_title": "title-proyecto8",
       "data_value_info": "info-proyecto8",
-      "imagen": "./assets/images/varishop.png",
+      "imagen": "./assets/img/projects",
       "demoUrl": "https://ejeclinicadental.com/es_co",
       "technologies": [
         "HTML5",
@@ -96,8 +96,8 @@
       "id": 9,
       "data_value_title": "title-proyecto9",
       "data_value_info": "info-proyecto9",
-      "imagen": "./assets/images/varishop.png",
-      "demoUrl": "https://ejeclinicadental.com/es_co",
+      "imagen": "./assets/img/projects/otto.webp",
+      "demoUrl": "https://ottoapis.com",
       "technologies": [
         "React",
         "Node.js (Express)",
@@ -109,15 +109,15 @@
       "id": 10,
       "data_value_title": "title-proyecto10",
       "data_value_info": "info-proyecto10",
-      "imagen": "./assets/images/varishop.png",
-      "demoUrl": "https://ejeclinicadental.com/es_co"
+      "imagen": "./assets/img/projects/neuradevsoftware.webp",
+      "demoUrl": "https://neuradevsoftware.com"
     },
     {
       "id": 11,
       "data_value_title": "title-proyecto11",
       "data_value_info": "info-proyecto11",
-      "imagen": "./assets/images/varishop.png",
-      "demoUrl": "https://ejeclinicadental.com/es_co",
+      "imagen": "./assets/img/projects/aps.webp",
+      "demoUrl": "https://apsbest.com",
       "technologies": [
         "WordPress",
         "Elementor"
@@ -127,8 +127,8 @@
       "id": 12,
       "data_value_title": "title-proyecto12",
       "data_value_info": "info-proyecto12",
-      "imagen": "./assets/images/varishop.png",
-      "demoUrl": null,
+      "imagen": "./assets/img/projects/trabajanosotros.webp",
+      "demoUrl": "https://comunidadtesistadelatinoamerica.com/convocatoria-asesores-academicos",
       "technologies": [
         "WordPress",
         "Elementor"
@@ -138,7 +138,7 @@
       "id": 13,
       "data_value_title": "title-proyecto13",
       "data_value_info": "info-proyecto13",
-      "imagen": "./assets/images/varishop.png",
+      "imagen": "./assets/img/projects",
       "demoUrl": "https://clientes.neuradevsoftware.com",
       "technologies": [
         "React",

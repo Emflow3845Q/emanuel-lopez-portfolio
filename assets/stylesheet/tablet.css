@@ -1,95 +1,216 @@
-/* Header */
+/* Tablet Styles - 760px and above */
+@media screen and (min-width: 760px) {
+    /* Header Tablet */
+    .header {
+        padding: 1rem 4rem;
+    }
 
-nav.nav_menu.active {
-    width: 50%;
-    margin-left: 50%;
-    top: 5.9rem;
+    .header .logo__header {
+        width: 5rem;
+    }
+
+    nav.nav_menu.active {
+        width: 40%;
+        margin-left: 60%;
+        top: 6.3rem;
+    }
+
+    /* Home Tablet */
+    .home {
+        padding: 10rem 0 6rem 0;
+    }
+
+    .container_image-home {
+        padding: 3rem 0;
+    }
+
+    .image_home {
+        max-width: 50rem;
+    }
+
+    .home_info {
+        padding: 0 4rem;
+    }
+
+    .home_text-1 {
+        font-size: 2.4rem;
+    }
+
+    .home_text-2 {
+        font-size: 4rem;
+    }
+
+    .home_text-3 {
+        font-size: 1.6rem;
+    }
+
+    .container_button {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .cv_button,
+    .contact_button {
+        padding: 1.2rem 3rem;
+        font-size: 1.6rem;
+    }
+
+    .links {
+        gap: 3rem;
+    }
+
+    .links img {
+        width: 3.2rem;
+    }
+
+    /* Sections Tablet */
+    section h1 {
+        font-size: 2.8rem;
+        margin-bottom: 5rem;
+    }
+
+    /* Acerca De Tablet */
+    .acerdeDe {
+        padding: 6rem 4rem;
+    }
+
+    .container_content-acerdeDe {
+        flex-direction: row;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    .container_texto-acerdeDe {
+        flex: 1;
+        padding: 0;
+    }
+
+    .texto_acerdeDe {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        text-align: left;
+    }
+
+    .container_image-acerdeDe {
+        flex: 1;
+        padding: 0;
+    }
+
+    .image_acerdeDe {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    /* Competencias Tablet */
+    .Competencias {
+        padding: 6rem 4rem;
+    }
+
+    .cards_container--Competencias {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 600px;
+        gap: 3rem;
+    }
+
+    .cards--Competencias {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .cards--Competencias img {
+        width: 7rem;
+        height: 7rem;
+    }
+
+    .cards--Competencias p {
+        font-size: 1.5rem;
+    }
+
+    /* Experiencia Tablet */
+    .experiencia {
+        padding: 6rem 4rem;
+    }
+
+    .cards_container--experiencia {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    .cards--experiencia {
+        max-width: 300px;
+        flex: 1;
+        min-width: 280px;
+    }
+
+    /* ===== PROYECTOS TABLET - DIV DE IMAGEN AJUSTADO ===== */
+    .proyectos {
+        padding: 6rem 4rem;
+    }
+
+    .cards_container--proyectos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+
+    .cards--proyectos {
+        min-height: 420px; /* Reducida para compensar */
+    }
+
+    .container_imgCard--proyectos {
+        height: 120px; /* Altura reducida para tablet */
+        display: block;
+    }
+
+    .container_textCard--proyectos h2 {
+        font-size: 2rem;
+    }
+
+    .container_textCard--proyectos p {
+        font-size: 1.4rem;
+        -webkit-line-clamp: 5;
+    }
+
+    .tech-tags {
+        margin-top: 15px;
+    }
+
+    /* Contacto Tablet */
+    .contacto {
+        padding: 6rem 4rem;
+    }
+
+    .container_box--contacto {
+        max-width: 700px;
+    }
+
+    .container--contacto {
+        padding: 4rem 3rem;
+    }
+
+    .form-group {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .form-group input {
+        flex: 1;
+    }
+
+    .container_text--contacto p {
+        font-size: 1.6rem;
+    }
+
+    /* Footer Tablet */
+    .contianer--footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 4rem;
+    }
+
+    .container_text--footer {
+        flex-direction: row;
+        gap: 0.5rem;
+    }
 }
-
-/* Home */
-
-.image_home {
-    max-width: 50rem;
-}
-
-.container_text-info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.home_text-1 {
-    margin-right: 1rem;
-    font-size: 2.4rem;
-}
-
-.home_text-2 {
-    font-size: 3.6rem;
-}
-
-/* Sobre mi */
-
-.acerdeDe {
-    padding: 0 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.container_content-acerdeDe {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.container_texto-acerdeDe {
-    padding: 4rem;
-}
-
-.title_acerdeDe {
-    font-size: 3rem;
-}
-
-.texto_acerdeDe {
-    font-size: 1.8rem;
-    line-height: 2.5rem;
-}
-
-.container_image-acerdeDe {
-    width: 65%;
-    margin-top: 2rem;
-}
-
-/* Competencias */
-
-.cards_container--Competencias {
-    column-gap: 4rem;
-}
-
-/* Formación */
-
-.cards_container--experiencia {
-    flex-wrap: wrap;
-    flex-direction: row;
-}
-
-.cards--experiencia {
-    margin: 0 2rem 3rem 2rem;
-}
-
-/* Proyectos */
-
-.cards--proyectos {
-    max-width: 48rem;
-}
-
-.container_btn--proyectos button {
-    width: 20.6rem;
-}
-
-/* Contacto */
-.container--contacto {
-    margin: 0 auto;
-    width: 80%;
-}
-
