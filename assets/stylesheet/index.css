@@ -407,7 +407,7 @@ section h1 {
     font-size: 1.4rem;
 }
 
-/* Experiencia Mobile */
+/* ===== EXPERIENCIA MOBILE - TARJETAS PERFECTAMENTE ALINEADAS ===== */
 .experiencia {
     background-color: var(--eerie-black);
 }
@@ -430,7 +430,9 @@ section h1 {
     padding: 3rem 2rem;
     width: 100%;
     max-width: 350px;
+    min-height: 280px;
     transition: all 0.3s ease;
+    justify-content: space-between;
 }
 
 .cards--experiencia:hover {
@@ -438,31 +440,77 @@ section h1 {
     box-shadow: 0 15px 30px rgba(0,0,0,0.4);
 }
 
-.cards--experiencia img {
+/* Contenedor de logo con altura fija y alineación perfecta */
+.cards--experiencia .logo-container {
     width: 100%;
-    max-width: 200px;
-    height: auto;
-    object-fit: contain;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 2rem;
+    flex-shrink: 0;
+    position: relative;
 }
 
-.container_texto--experiencia p:nth-child(1) {
+.cards--experiencia .logo-container img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* Ajustes específicos para mantener consistencia visual */
+.cards--experiencia .logo-container img[alt*="Latinoamérica"] {
+    max-width: 200px;
+    max-height: 80px;
+}
+
+.cards--experiencia .logo-container img[alt*="Xtrategic"] {
+    max-width: 180px;
+    max-height: 70px;
+}
+
+.cards--experiencia .logo-container img[alt*="Neuradev"] {
+    max-width: 190px;
+    max-height: 65px;
+}
+
+/* Contenedor de texto con altura fija y alineación consistente */
+.container_texto--experiencia {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80px; /* Altura mínima para el texto */
+}
+
+.container_texto--experiencia .cargo {
     color: var(--beaver);
     font-family: 'Cooper Hewitt';
     letter-spacing: .1rem;
     font-size: 1.8rem;
     font-weight: bold;
     margin-bottom: 1rem;
+    line-height: 1.2;
+    text-align: center;
+    width: 100%;
 }
 
-.container_texto--experiencia p:nth-child(2) {
+.container_texto--experiencia .tiempo {
     color: var(--light-grey);
     font-family: 'Cooper Hewitt';
     letter-spacing: .1rem;
     font-size: 1.4rem;
+    line-height: 1.3;
+    text-align: center;
+    width: 100%;
 }
 
-/* ===== PROYECTOS SECTION - DIV DE IMAGEN AJUSTADO ===== */
+/* ===== PROYECTOS SECTION ===== */
 .proyectos {
     background-color: var(--jet);
     padding: 60px 20px;
@@ -477,7 +525,6 @@ section h1 {
     font-weight: bold;
 }
 
-/* ===== CONTENEDOR DE PROYECTOS - ALTURA UNIFORME ===== */
 .cards_container--proyectos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -487,7 +534,6 @@ section h1 {
     align-items: stretch;
 }
 
-/* ===== TARJETAS - ALTURA FIJA ===== */
 .cards--proyectos {
     background: var(--eerie-black);
     border-radius: 15px;
@@ -502,19 +548,17 @@ section h1 {
     margin: 0;
 }
 
-/* Tarjetas CON enlace - tienen efectos hover */
 .card-link .cards--proyectos:hover {
     transform: translateY(-8px);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
 }
 
-/* ===== IMAGEN - DIV AJUSTADO AL TAMAÑO DE LA IMAGEN ===== */
 .container_imgCard--proyectos {
     width: 100%;
     position: relative;
     overflow: hidden;
     flex-shrink: 0;
-    height: 100px; /* Altura reducida para que coincida con la imagen */
+    height: 100px;
     background: var(--jet);
     display: block;
     align-items: center;
@@ -530,7 +574,6 @@ section h1 {
     background: var(--jet);
 }
 
-/* Efectos hover SOLO para enlaces */
 .card-link:hover .container_imgCard--proyectos img {
     transform: scale(1.05);
 }
@@ -580,7 +623,6 @@ section h1 {
     transform: translate(-50%, -50%) scale(1);
 }
 
-/* ===== CONTENIDO - DISTRIBUCIÓN FLEXIBLE ===== */
 .container_textCard--proyectos {
     padding: 25px;
     display: flex;
@@ -613,7 +655,6 @@ section h1 {
     -webkit-box-orient: vertical;
 }
 
-/* ===== ETIQUETAS DE TECNOLOGÍAS ===== */
 .tech-tags {
     display: flex;
     flex-wrap: wrap;
@@ -639,7 +680,6 @@ section h1 {
     transform: translateY(-2px);
 }
 
-/* ===== ENLACE COMPLETO DE LA TARJETA ===== */
 .card-link {
     text-decoration: none;
     color: inherit;

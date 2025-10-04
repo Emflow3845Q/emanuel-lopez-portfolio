@@ -125,7 +125,7 @@
         font-size: 1.5rem;
     }
 
-    /* Experiencia Tablet */
+    /* ===== EXPERIENCIA TABLET - ALINEACIÓN PERFECTA ===== */
     .experiencia {
         padding: 6rem 4rem;
     }
@@ -139,11 +139,36 @@
 
     .cards--experiencia {
         max-width: 300px;
+        min-height: 300px;
         flex: 1;
         min-width: 280px;
     }
 
-    /* ===== PROYECTOS TABLET - DIV DE IMAGEN AJUSTADO ===== */
+    .cards--experiencia .logo-container {
+        height: 130px;
+        margin-bottom: 2rem;
+    }
+
+    .cards--experiencia .logo-container img[alt*="Latinoamérica"] {
+        max-width: 210px;
+        max-height: 85px;
+    }
+
+    .cards--experiencia .logo-container img[alt*="Xtrategic"] {
+        max-width: 190px;
+        max-height: 75px;
+    }
+
+    .cards--experiencia .logo-container img[alt*="Neuradev"] {
+        max-width: 200px;
+        max-height: 70px;
+    }
+
+    .container_texto--experiencia {
+        min-height: 85px;
+    }
+
+    /* ===== PROYECTOS TABLET ===== */
     .proyectos {
         padding: 6rem 4rem;
     }
@@ -154,11 +179,11 @@
     }
 
     .cards--proyectos {
-        min-height: 420px; /* Reducida para compensar */
+        min-height: 420px;
     }
 
     .container_imgCard--proyectos {
-        height: 120px; /* Altura reducida para tablet */
+        height: 120px;
         display: block;
     }
 

@@ -2,14 +2,14 @@
     "menu": {
         "item1": "HOME",
         "item2": "ABOUT",
-        "item3": "SKILLS", 
+        "item3": "SKILLS",
         "item4": "EXPERIENCE",
         "item5": "PROJECTS",
         "item6": "CONTACT"
     },
     "home": {
         "home_text-1": "HELLO! I AM",
-        "home_text-3": "FULL STACK DEVELOPER", 
+        "home_text-3": "FULL STACK DEVELOPER",
         "cv_button": "DOWNLOAD CV",
         "contact_button": "CONTACT"
     },
@@ -23,7 +23,7 @@
         "title": "EXPERIENCE",
         "experiencia1": "TECHNICAL PROBLEM SOLVING",
         "tiempo-experiencia1": "AUGUST 2022 / APRIL 2024",
-        "experiencia2": "E-COMMERCE", 
+        "experiencia2": "E-COMMERCE",
         "tiempo-experiencia2": "APRIL 2024 / MAY 2024",
         "experiencia3": "FULL STACK DEVELOPER"
     },
@@ -34,7 +34,7 @@
         "title-proyecto2": "EMANUEL LÓPEZ | PORTFOLIO",
         "info-proyecto2": "Digital portfolio that offers an interactive platform to showcase a variety of creative works and projects, allowing for a unique and engaging presentation of art, design, and more.",
         "title-proyecto3": "VARISHOP",
-        "info-proyecto3": "Varishop, the e-commerce platform on Shopify that will transform your online shopping experience. A seamless example of a modern and efficient virtual store.",
+        "info-proyecto3": "Varishop, a dropshipping online store built on Shopify. A modern, automated and efficient ecommerce example.",
         "title-proyecto4": "Raffle System - NeuraDev Software",
         "info-proyecto4": "A web platform for managing online raffles with admin panel, custom landing page, real-time reservation verification, and automatic WhatsApp notifications.",
         "title-proyecto5": "Molica Coffee",

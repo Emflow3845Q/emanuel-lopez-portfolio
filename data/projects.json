@@ -39,8 +39,9 @@
         "React",
         "Node.js (Express)",
         "MongoDB",
-        "Tailwind CSS",
-        "Twilio"
+        "TailwindCSS",
+        "Ant Design",
+        "JWT"
       ]
     },
     {
@@ -84,8 +85,8 @@
       "id": 8,
       "data_value_title": "title-proyecto8",
       "data_value_info": "info-proyecto8",
-      "imagen": "./assets/img/projects",
-      "demoUrl": "https://ejeclinicadental.com/es_co",
+      "imagen": "./assets/img/projects/xtrategic-landingmarcapersonal.webp",
+      "demoUrl": "https://xtrategicdigital.com",
       "technologies": [
         "HTML5",
         "CSS3",
@@ -100,9 +101,12 @@
       "demoUrl": "https://ottoapis.com",
       "technologies": [
         "React",
+        "Vite",
+        "TailwindCSS",
         "Node.js (Express)",
-        "Tailwind CSS",
-        "PayU"
+        "PayU",
+        "Nodemailer",
+        "Framer Motion"
       ]
     },
     {
@@ -110,7 +114,14 @@
       "data_value_title": "title-proyecto10",
       "data_value_info": "info-proyecto10",
       "imagen": "./assets/img/projects/neuradevsoftware.webp",
-      "demoUrl": "https://neuradevsoftware.com"
+      "demoUrl": "https://neuradevsoftware.com",
+      "technologies": [
+        "React",
+        "Vite",
+        "TailwindCSS",
+        "Framer Motion",
+        "React Router DOM"
+      ]
     },
     {
       "id": 11,
@@ -138,13 +149,15 @@
       "id": 13,
       "data_value_title": "title-proyecto13",
       "data_value_info": "info-proyecto13",
-      "imagen": "./assets/img/projects",
+      "imagen": "./assets/img/projects/clientes-neuradevsoftware.webp",
       "demoUrl": "https://clientes.neuradevsoftware.com",
       "technologies": [
         "React",
         "Node.js (Express)",
         "MongoDB",
-        "Tailwind CSS"
+        "Material UI",
+        "JWT",
+        "Google OAuth"
       ]
     }
   ]
