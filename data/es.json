@@ -51,10 +51,14 @@
         "info-proyecto10": "Sitio web corporativo desarrollado para NeuraDev Software, diseñado para comunicar sus servicios de desarrollo web, aplicaciones móviles y consultoría tecnológica. Un proyecto enfocado en transmitir solidez, modernidad y presencia digital profesional.",
         "title-proyecto11": "APS Atlantic Pacific Standard",
         "info-proyecto11": "Sitio web corporativo desarrollado para APS Atlantic Pacific Standard, contratista general. El proyecto renovó su presencia digital, destacando servicios integrales, proyectos, certificaciones y el compromiso de la empresa con sus clientes, en colaboración con Smart PPC Bidding.",
-        "title-proyecto12": "Landing Page – Comunidad de Tesistas",
-        "info-proyecto12": "Landing page desarrollada para la Comunidad de Tesistas de Latinoamérica, creada desde cero para optimizar diseño, estructura y rendimiento. El proyecto tuvo como objetivo potenciar la convocatoria de asesores académicos dentro de la comunidad.",
+        "title-proyecto12": "Landing Page – Comunidad Tesista Latam",
+        "info-proyecto12": "Landing page desarrollada para la Comunidad Tesista de Latinoamérica, creada desde cero para optimizar diseño, estructura y rendimiento. El proyecto tuvo como objetivo potenciar la convocatoria de asesores académicos dentro de la comunidad.",
         "title-proyecto13": "Sistema de Clientes – NeuraDev Software (En desarrollo)",
-        "info-proyecto13": "Sistema de gestión desarrollado para NeuraDev Software que permite registrar clientes, generar facturas, asignar proyectos y desarrolladores, además de ofrecer soporte y administración centralizada. Una plataforma integral para optimizar la relación con clientes y la gestión interna."
+        "info-proyecto13": "Sistema de gestión desarrollado para NeuraDev Software que permite registrar clientes, generar facturas, asignar proyectos y desarrolladores, además de ofrecer soporte y administración centralizada. Una plataforma integral para optimizar la relación con clientes y la gestión interna.",
+        "title-proyecto14": "Rediseño Web Corporativo – Comunidad Tesista de Latinoamérica",
+        "info-proyecto14": "Reestructuración completa del sitio web corporativo de Comunidad Tesista de Latinoamérica, mejorando su diseño visual, navegación y experiencia de usuario. Se implementaron mejoras en la presentación de servicios, información institucional y contacto, logrando un sitio más moderno, profesional e intuitivo.",
+        "title-proyecto15": "Chatbot Inteligente – Arbeláez Ortodoncia",
+        "info-proyecto15": "Chatbot diseñado para brindar respuestas automáticas a preguntas frecuentes, filtrar consultas de pacientes y redirigirlas al personal de atención cuando es necesario. Optimiza la comunicación, agiliza la atención al cliente y mejora la experiencia de los usuarios al interactuar con la clínica."
     },
     "contacto": {
         "title": "CONTACTO",

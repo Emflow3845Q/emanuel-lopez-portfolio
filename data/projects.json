@@ -5,7 +5,15 @@
       "data_value_title": "title-proyecto1",
       "data_value_info": "info-proyecto1",
       "imagen": "./assets/img/projects/comunalatinvice.webp ",
-      "demoUrl": "https://comunalatinvicerp.neuradevsoftware.com"
+      "demoUrl": "https://comunalatinvicerp.neuradevsoftware.com",
+      "technologies": [
+        "React",
+        "React Bootstrap",
+        "Node.js (Express)",
+        "Nodemailer",
+        "React Mailchimp Subscribe",
+        "Animate.css"
+      ]
     },
     {
       "id": 2,
@@ -33,7 +41,7 @@
       "id": 4,
       "data_value_title": "title-proyecto4",
       "data_value_info": "info-proyecto4",
-      "imagen": "./assets/img/projects",
+      "imagen": "./assets/img/projects/sistemarifas.webp",
       "demoUrl": "https://demorifas.neuradevsoftware.com",
       "technologies": [
         "React",
@@ -106,7 +114,8 @@
         "Node.js (Express)",
         "PayU",
         "Nodemailer",
-        "Framer Motion"
+        "Framer Motion",
+        "AWS"
       ]
     },
     {
@@ -158,6 +167,29 @@
         "Material UI",
         "JWT",
         "Google OAuth"
+      ]
+    },
+    {
+      "id": 14,
+      "data_value_title": "title-proyecto14",
+      "data_value_info": "info-proyecto14",
+      "imagen": "./assets/img/projects/comunidadtesista.webp",
+      "demoUrl": "https://comunidadtesistadelatinoamerica.com",
+      "technologies": [
+        "WordPress",
+        "Elementor"
+      ]
+    },
+    {
+      "id": 15,
+      "data_value_title": "title-proyecto15",
+      "data_value_info": "info-proyecto15",
+      "imagen": "./assets/img/projects/chatbot-odontologico.png",
+      "demoUrl": null,
+      "technologies": [
+        "Node.js (Express)",
+        "Twilio",
+        "Google Gemini"
       ]
     }
   ]

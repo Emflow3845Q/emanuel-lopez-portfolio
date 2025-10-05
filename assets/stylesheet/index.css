@@ -650,7 +650,7 @@ section h1 {
     margin: 0;
     flex: 1;
     overflow: hidden;
-    display: -webkit-box;
+    display: block;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
 }
