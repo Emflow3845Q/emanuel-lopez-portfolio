@@ -1,4 +1,3 @@
-// projects.js - Sistema sincronizado con idiomas
 class ProjectsManager {
     constructor() {
         this.projects = [];
@@ -12,8 +11,6 @@ class ProjectsManager {
 
         // Notificar que los proyectos están listos para actualizar textos
         this.notifyProjectsReady();
-
-        console.log('✅ ProjectsManager inicializado');
     }
 
     async loadProjects() {
@@ -43,8 +40,6 @@ class ProjectsManager {
         container.innerHTML = this.projects.map(project =>
             this.createProjectCard(project)
         ).join('');
-
-        console.log(`✅ ${this.projects.length} proyectos renderizados`);
     }
 
     createProjectCard(project) {

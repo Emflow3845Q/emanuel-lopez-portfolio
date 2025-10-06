@@ -23,18 +23,84 @@ window.addEventListener('scroll', () => {
 });
 
 /*===== Boton Menu =====*/
-btn.addEventListener('click', function() {
-    if (this.classList.contains('active')) {
-        this.classList.remove('active');
-        this.classList.add('not-active');
-        document.querySelector('.nav_menu').classList.remove('active');
-        document.querySelector('.nav_menu').classList.add('not-active');
+let scrollPosition = 0;
+
+btn.addEventListener('click', function () {
+    toggleMenu();
+});
+
+// Función para abrir/cerrar menú
+function toggleMenu() {
+    const isMenuOpen = btn.classList.contains('active');
+
+    if (isMenuOpen) {
+        closeMenu();
+    } else {
+        openMenu();
     }
-    else {
-        this.classList.add('active');
-        this.classList.remove('not-active');
-        document.querySelector('.nav_menu').classList.remove('not-active');
-        document.querySelector('.nav_menu').classList.add('active');
+}
+
+// Función para abrir menú
+function openMenu() {
+    btn.classList.add('active');
+    btn.classList.remove('not-active');
+    document.querySelector('.nav_menu').classList.remove('not-active');
+    document.querySelector('.nav_menu').classList.add('active');
+
+    // Deshabilitar scroll y guardar posición
+    scrollPosition = window.pageYOffset;
+    document.body.classList.add('no-scroll');
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${scrollPosition}px`;
+    document.body.style.width = '100%';
+}
+
+// Función para cerrar menú
+function closeMenu() {
+    btn.classList.remove('active');
+    btn.classList.add('not-active');
+    document.querySelector('.nav_menu').classList.remove('active');
+    document.querySelector('.nav_menu').classList.add('not-active');
+
+    // Habilitar scroll y restaurar posición
+    document.body.classList.remove('no-scroll');
+    document.body.style.removeProperty('position');
+    document.body.style.removeProperty('top');
+    document.body.style.removeProperty('width');
+    window.scrollTo(0, scrollPosition);
+}
+
+// Cerrar menú al hacer clic en enlaces del menú
+document.querySelectorAll('.nav_menu a').forEach(link => {
+    link.addEventListener('click', (e) => {
+        // Solo cerrar si el menú está abierto (en móvil)
+        if (window.innerWidth <= 980 && btn.classList.contains('active')) {
+            closeMenu();
+        }
+
+        // Scroll suave a la sección
+        const href = link.getAttribute('href');
+        if (href.startsWith('#')) {
+            e.preventDefault();
+            const targetId = href.substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                const offsetTop = targetElement.offsetTop - 80; 
+
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    });
+});
+
+// Cerrar menú al redimensionar la ventana (si se cambia a desktop)
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 980 && btn.classList.contains('active')) {
+        closeMenu();
     }
 });
 
@@ -48,9 +114,7 @@ const changeLanguage = async language => {
 
         // Actualizar todos los textos con data-section y data-value
         updateAllTexts(texts);
-        
-        console.log(`Idioma cambiado a: ${language}`);
-        
+
     } catch (error) {
         console.error('Error cambiando idioma:', error);
     }
@@ -58,7 +122,7 @@ const changeLanguage = async language => {
 
 // Función para actualizar TODOS los textos
 function updateAllTexts(texts) {
-    for(const textToChange of textsToChange) {
+    for (const textToChange of textsToChange) {
         const section = textToChange.dataset.section;
         const value = textToChange.dataset.value;
 
@@ -75,14 +139,14 @@ function updateAllTexts(texts) {
 function updateProjectsTexts(texts) {
     const projectTitles = document.querySelectorAll('[data-section="proyectos"][data-value^="title-proyecto"]');
     const projectDescriptions = document.querySelectorAll('[data-section="proyectos"][data-value^="info-proyecto"]');
-    
+
     projectTitles.forEach(title => {
         const value = title.dataset.value;
         if (texts.proyectos && texts.proyectos[value]) {
             title.innerHTML = texts.proyectos[value];
         }
     });
-    
+
     projectDescriptions.forEach(desc => {
         const value = desc.dataset.value;
         if (texts.proyectos && texts.proyectos[value]) {
@@ -123,7 +187,7 @@ window.addEventListener('scroll', () => {
 });
 
 /*===== Boton y función ir arriba =====*/
-window.onscroll = function() {
+window.onscroll = function () {
     if (document.documentElement.scrollTop > 100) {
         document.querySelector('.go-top-container').classList.add('show');
     }
@@ -140,7 +204,7 @@ document.querySelector('.go-top-container').addEventListener('click', () => {
 });
 
 /*===== Clic derecho =====*/
-document.addEventListener('contextmenu', function(e) {
+document.addEventListener('contextmenu', function (e) {
     e.preventDefault();
 });
 
@@ -148,7 +212,7 @@ document.addEventListener('contextmenu', function(e) {
 document.addEventListener('DOMContentLoaded', async () => {
     // Cargar idioma primero
     await changeLanguage('es');
-    
+
     // Esperar a que los proyectos se rendericen y luego actualizar textos
     setTimeout(() => {
         refreshTexts();
