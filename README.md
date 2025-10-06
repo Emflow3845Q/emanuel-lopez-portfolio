@@ -1,26 +1,80 @@
-# Web Portfolio - Technical Documentation
+```markdown
+# Web Portfolio
 
-This document describes the structure, modular architecture, and internal functioning of the **Web Portfolio** project, developed as a professional presentation single-page application (SPA).
+> Professional single-page application (SPA) for modern online presence, developed with maintainability, modularity, and scalability in mind.
 
-The system is implemented with standard web technologies (HTML5, CSS3, JavaScript ES6+) and a modular structure oriented towards maintainability and scalability.
+---
 
-***
+## Table of Contents
 
-## 1. General Overview
+- [Overview](#overview)
+- [Features](#features)
+- [Architecture](#architecture)
+- [Technology Stack](#technology-stack)
+- [Project Structure](#project-structure)
+- [File Reference](#file-reference)
+- [Execution Flow](#execution-flow)
+- [Maintenance](#maintenance)
+- [Author](#author)
+- [License](#license)
 
-This project is a professional portfolio structured as an SPA.  
-Content is dynamically managed through JSON files, allowing for internationalization, rapid updating, and clear separation between content, logic, and presentation.
+---
 
-**Core Features:**  
-- Modular, organized structure  
-- Multi-language support (Spanish and English)  
-- Responsive design for desktop, tablet, and mobile  
-- Dynamic data loading from JSON files  
-- Performance optimization using WebP resources and local fonts
+## Overview
 
-***
+**Web Portfolio** is a modular SPA designed as a professional digital portfolio.  
+It offers dynamic and internationalized content management with a responsive interface for desktop, tablet, and mobile devices.
 
-## 2. Project Structure
+---
+
+## Features
+
+- Modular and organized file structure
+- Multi-language support (Spanish & English)
+- Responsive design for all device sizes
+- Dynamic content loading from JSON files
+- Performance optimized (WebP images, local fonts)
+
+---
+
+## Architecture
+
+```
+HTML (Base structure)
+ ├── CSS (Design and presentation)
+ │    ├── index.css
+ │    ├── desktop.css
+ │    ├── tablet.css
+ │    └── loader.css
+ ├── JS (Logic and behavior)
+ │    ├── main.js
+ │    └── projects.js
+ ├── DATA (Dynamic content)
+ │    ├── es.json
+ │    ├── en.json
+ │    └── projects.json
+ └── ASSETS (Fonts and images)
+```
+
+- **main.js**: Initialization, language loading, animations, and global events
+- **projects.js**: Dynamic rendering of projects from `projects.json`
+
+---
+
+## Technology Stack
+
+| Technology          | Purpose                                            |
+|---------------------|----------------------------------------------------|
+| HTML5               | Structure and semantics                            |
+| CSS3                | Visual and responsive design                       |
+| JavaScript (ES6+)   | Logic and dynamic loading                          |
+| JSON                | Structured storage for texts and projects          |
+| WebP / SVG          | Optimized images and graphics                      |
+| VS Code             | Development environment                            |
+
+---
+
+## Project Structure
 
 ```
 |   index.html
@@ -33,7 +87,6 @@ Content is dynamically managed through JSON files, allowing for internationaliza
 |   +---fonts
 |   |       CooperHewitt-Light.woff
 |   |       CooperHewitt-Thin.woff
-|   |       
 |   +---img
 |   |   |   icon-demoProyecto.webp
 |   |   |   icon-en.webp
@@ -63,120 +116,97 @@ Content is dynamically managed through JSON files, allowing for internationaliza
         projects.js
 ```
 
-***
+---
 
-## 3. Technologies Used
+## File Reference
 
-| Technology   | Description                                      |
-|--------------|--------------------------------------------------|
-| **HTML5**    | Defines the website structure and semantics       |
-| **CSS3**     | Visual design and responsive style rules          |
-| **JavaScript (ES6+)** | Logic, interaction, and dynamic loading  |
-| **JSON**     | Structured content for texts and projects         |
-| **WebP / SVG** | Optimized images and graphics                   |
-| **VS Code**  | Development environment                           |
+### index.html
+Defines main site structure and includes all core sections, stylesheets, and scripts.
 
-***
+### main.js
+Handles initial loading, language configuration, dynamic text loading, animations, and global application events.
 
-## 4. System Architecture
+### projects.js
+Dynamically loads and renders project cards using data from `projects.json`.
 
-The application uses a modular architecture with clear separation of responsibilities:
+### CSS Files
+- index.css: Base styles and variables
+- desktop.css: Styles for wide screens
+- tablet.css: Styles for tablets & medium devices
+- loader.css: Loading animations
+
+### JSON Files
+- es.json / en.json: Translated user interface texts
+- projects.json: List of portfolio projects (name, description, image, URL)
+
+---
+
+## Execution Flow
+
+1. **Initialization:**  
+   Loads `index.html` and main CSS, then runs `main.js` after the DOMContentLoaded event.
+
+2. **Language Setup:**  
+   Default language is Spanish. Loads the appropriate localization file (`es.json` or `en.json`) and updates interface texts.
+
+3. **Content Rendering:**  
+   `projects.js` loads and displays portfolio projects dynamically as cards.
+
+4. **User Interaction:**  
+   Handles language switching, navigation and section display.
+
+5. **Responsiveness:**  
+   Viewport-adaptive CSS for full compatibility.
+
+---
+
+## Maintenance
+
+### Add a New Project
+
+1. Add the corresponding project image to `assets/img/projects/`
+2. Edit `data/projects.json` and insert a new project object:
 
 ```
-HTML (Base structure)
- ├── CSS (Design and presentation)
- │    ├── index.css
- │    ├── desktop.css
- │    ├── tablet.css
- │    └── loader.css
- ├── JS (Logic and behavior)
- │    ├── main.js
- │    └── projects.js
- ├── DATA (Dynamic content)
- │    ├── es.json
- │    ├── en.json
- │    └── projects.json
- └── ASSETS (Visuals and typography)
-```
-
-- **main.js:** Manages initialization, language loading, animations, and global events
-- **projects.js:** Handles dynamic rendering of projects using `projects.json`
-
-***
-
-## 5. Execution Flow
-
-1. **Initialization**
-   - Loads `index.html` and core stylesheets.
-   - Upon `DOMContentLoaded`, runs `main.js`.
-2. **Language Setup**
-   - Determines initial language (default: Spanish).
-   - Loads texts from `es.json` or `en.json` as needed.
-3. **Content Rendering**
-   - `projects.js` reads `projects.json` and generates visual portfolio elements.
-4. **User Interaction**
-   - Handles events such as language change, navigation, and section viewing.
-5. **Responsiveness**
-   - Device-specific CSS ensures responsive display on all screen sizes.
-
-***
-
-## 6. Technical Reference Per File
-
-### 6.1. index.html
-Defines the site's main structure and includes section containers as well as stylesheet and script references.
-
-### 6.2. main.js
-Main system file. Handles initial loading, language setup, animations, and global events.  
-Connects dynamic content and DOM elements.
-
-### 6.3. projects.js
-Manages dynamic rendering of projects.  
-Loads from `projects.json` and generates corresponding HTML elements.
-
-### 6.4. CSS Files
-- **index.css:** Base styles and global variables  
-- **desktop.css:** Styles for large screens  
-- **tablet.css:** Styles for mid-sized screens  
-- **loader.css:** Loading styles and animations
-
-### 6.5. JSON Files
-- **es.json / en.json:** UI translated texts  
-- **projects.json:** List of projects (name, description, image, URL)
-
-***
-
-## 7. Maintenance and Extensibility
-
-**Add a new project:**  
-1. Add project image in `assets/img/projects/`  
-2. Edit `data/projects.json` and add a new entry:
-
-```json
 {
   "name": "New Project",
-  "description": "Brief project description",
+  "description": "Short project description",
   "image": "assets/img/projects/new.webp",
   "url": "https://myproject.com"
 }
 ```
+New projects are detected and shown automatically.
 
-System automatically displays it in the interface.
+### Add a New Language
 
-**Add a new language:**  
-1. Create a JSON file (for example, `fr.json`)  
-2. Add the new language in the `main.js` loading logic
+1. Create a corresponding JSON translation file (e.g., `fr.json`) in `/data`.
+2. Add logic/option in `main.js` for language selection.
 
-***
+---
 
-## 8. Author
+## Author
 
 **Emanuel López**  
 Web Developer — Full Stack Developer  
-[Professional portfolio](https://emadev.neuradevsoftware.com)  
-[emanuel.arango1226@gmail.com](mailto:emanuel.arango1226@gmail.com)
+[Professional Portfolio](https://emadev.neuradevsoftware.com)  
+[emanuel.arango1226@gmail.com](mailto:contacto@neuradevsoftware.com)
 
-***
+---
+
+## License
 
 © 2025. This document is part of the Web Portfolio technical documentation.  
-May be reproduced with attribution to the author.
+Reproduction is permitted with author attribution.
+```
+
+[1](https://reactjs.org)
+[2](https://github.com/topics/technical-documents)
+[3](https://github.com/topics/technical-documentation-page?l=html&o=desc&s=)
+[4](https://github.com/pengqun/awesome-documentation)
+[5](https://github.com/matheusfelipeog/beautiful-docs)
+[6](https://www.gitbook.com/blog/how-to-write-technical-documentation-with-examples)
+[7](https://github.com/redhat-documentation/modular-docs)
+[8](https://github.blog/developer-skills/documentation-done-right-a-developers-guide/)
+[9](https://github.com/topics/technical-writing)
+[10](https://www.reddit.com/r/technicalwriting/comments/15o72mu/goodbad_examples_of_technical_documentation/)
+[11](https://github.com/topics/documentation-template)
