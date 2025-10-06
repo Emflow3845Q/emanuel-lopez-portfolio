@@ -1,7 +1,12 @@
-```markdown
 # Web Portfolio
 
-> Professional single-page application (SPA) for modern online presence, developed with maintainability, modularity, and scalability in mind.
+[![HTML5](https://img.shields.io/badge/HTML5-Structure-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-Design-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![JSON](https://img.shields.io/badge/JSON-Dynamic%20Data-000000?logo=json&logoColor=white)](https://www.json.org/)
+[![License](https://img.shields.io/badge/License-Attribution-green.svg)]()
+
+> Professional single-page application (SPA) for a modern online presence, developed with **maintainability**, **modularity**, and **scalability** in mind.
 
 ---
 
@@ -29,10 +34,10 @@ It offers dynamic and internationalized content management with a responsive int
 
 ## Features
 
-- Modular and organized file structure
-- Multi-language support (Spanish & English)
-- Responsive design for all device sizes
-- Dynamic content loading from JSON files
+- Modular and organized file structure  
+- Multi-language support (Spanish & English)  
+- Responsive design for all device sizes  
+- Dynamic content loading from JSON files  
 - Performance optimized (WebP images, local fonts)
 
 ---
@@ -56,7 +61,7 @@ HTML (Base structure)
  └── ASSETS (Fonts and images)
 ```
 
-- **main.js**: Initialization, language loading, animations, and global events
+- **main.js**: Initialization, language loading, animations, and global events  
 - **projects.js**: Dynamic rendering of projects from `projects.json`
 
 ---
@@ -65,12 +70,12 @@ HTML (Base structure)
 
 | Technology          | Purpose                                            |
 |---------------------|----------------------------------------------------|
-| HTML5               | Structure and semantics                            |
-| CSS3                | Visual and responsive design                       |
-| JavaScript (ES6+)   | Logic and dynamic loading                          |
-| JSON                | Structured storage for texts and projects          |
-| WebP / SVG          | Optimized images and graphics                      |
-| VS Code             | Development environment                            |
+| **HTML5**           | Structure and semantics                            |
+| **CSS3**            | Visual and responsive design                       |
+| **JavaScript (ES6+)** | Logic and dynamic loading                        |
+| **JSON**            | Structured storage for texts and projects          |
+| **WebP / SVG**      | Optimized images and graphics                      |
+| **VS Code**         | Development environment                            |
 
 ---
 
@@ -130,14 +135,14 @@ Handles initial loading, language configuration, dynamic text loading, animation
 Dynamically loads and renders project cards using data from `projects.json`.
 
 ### CSS Files
-- index.css: Base styles and variables
-- desktop.css: Styles for wide screens
-- tablet.css: Styles for tablets & medium devices
-- loader.css: Loading animations
+- **index.css:** Base styles and variables  
+- **desktop.css:** Styles for wide screens  
+- **tablet.css:** Styles for tablets & medium devices  
+- **loader.css:** Loading animations  
 
 ### JSON Files
-- es.json / en.json: Translated user interface texts
-- projects.json: List of portfolio projects (name, description, image, URL)
+- **es.json / en.json:** Translated user interface texts  
+- **projects.json:** List of portfolio projects (name, description, image, URL)
 
 ---
 
@@ -153,7 +158,7 @@ Dynamically loads and renders project cards using data from `projects.json`.
    `projects.js` loads and displays portfolio projects dynamically as cards.
 
 4. **User Interaction:**  
-   Handles language switching, navigation and section display.
+   Handles language switching, navigation, and section display.
 
 5. **Responsiveness:**  
    Viewport-adaptive CSS for full compatibility.
@@ -179,7 +184,7 @@ New projects are detected and shown automatically.
 
 ### Add a New Language
 
-1. Create a corresponding JSON translation file (e.g., `fr.json`) in `/data`.
+1. Create a corresponding JSON translation file (e.g., `fr.json`) in `/data`.  
 2. Add logic/option in `main.js` for language selection.
 
 ---
@@ -187,9 +192,9 @@ New projects are detected and shown automatically.
 ## Author
 
 **Emanuel López**  
-Web Developer — Full Stack Developer  
+Full Stack Developer  
 [Professional Portfolio](https://emadev.neuradevsoftware.com)  
-[emanuel.arango1226@gmail.com](mailto:contacto@neuradevsoftware.com)
+[contacto@neuradevsoftware.com](mailto:contacto@neuradevsoftware.com)
 
 ---
 
@@ -197,16 +202,3 @@ Web Developer — Full Stack Developer
 
 © 2025. This document is part of the Web Portfolio technical documentation.  
 Reproduction is permitted with author attribution.
-```
-
-[1](https://reactjs.org)
-[2](https://github.com/topics/technical-documents)
-[3](https://github.com/topics/technical-documentation-page?l=html&o=desc&s=)
-[4](https://github.com/pengqun/awesome-documentation)
-[5](https://github.com/matheusfelipeog/beautiful-docs)
-[6](https://www.gitbook.com/blog/how-to-write-technical-documentation-with-examples)
-[7](https://github.com/redhat-documentation/modular-docs)
-[8](https://github.blog/developer-skills/documentation-done-right-a-developers-guide/)
-[9](https://github.com/topics/technical-writing)
-[10](https://www.reddit.com/r/technicalwriting/comments/15o72mu/goodbad_examples_of_technical_documentation/)
-[11](https://github.com/topics/documentation-template)
