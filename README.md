@@ -1,26 +1,26 @@
-# Documentación Técnica — Portafolio Web 
+# Web Portfolio - Technical Documentation
 
-Este documento describe la estructura, arquitectura y funcionamiento técnico del proyecto **Portafolio Web**, desarrollado como una aplicación web de presentación profesional.  
+This document describes the structure, modular architecture, and internal functioning of the **Web Portfolio** project, developed as a professional presentation single-page application (SPA).
 
-El sistema está implementado con tecnologías web estándar (HTML5, CSS3 y JavaScript ES6+) y una arquitectura modular orientada a la mantenibilidad y escalabilidad.
+The system is implemented with standard web technologies (HTML5, CSS3, JavaScript ES6+) and a modular structure oriented towards maintainability and scalability.
 
----
+***
 
-## 1. Descripción General
+## 1. General Overview
 
-El proyecto corresponde a un portafolio profesional diseñado como una aplicación de página única (SPA).  
-El contenido se gestiona de forma dinámica mediante archivos JSON, permitiendo internacionalización, actualización ágil y separación clara entre contenido, lógica y presentación.
+This project is a professional portfolio structured as an SPA.  
+Content is dynamically managed through JSON files, allowing for internationalization, rapid updating, and clear separation between content, logic, and presentation.
 
-**Características principales:**  
-- Estructura modular y organizada.  
-- Soporte multilenguaje (Español e Inglés).  
-- Diseño adaptable a escritorio, tablet y dispositivos móviles.  
-- Carga de datos dinámica desde archivos JSON.  
-- Rendimiento optimizado con recursos WebP y tipografía local.  
+**Core Features:**  
+- Modular, organized structure  
+- Multi-language support (Spanish and English)  
+- Responsive design for desktop, tablet, and mobile  
+- Dynamic data loading from JSON files  
+- Performance optimization using WebP resources and local fonts
 
----
+***
 
-## 2. Estructura del Proyecto
+## 2. Project Structure
 
 ```
 |   index.html
@@ -63,121 +63,120 @@ El contenido se gestiona de forma dinámica mediante archivos JSON, permitiendo 
         projects.js
 ```
 
----
+***
 
-## 3. Tecnologías Utilizadas
+## 3. Technologies Used
 
-| Tecnología | Descripción |
-|-------------|-------------|
-| **HTML5** | Define la estructura y semántica del sitio. |
-| **CSS3** | Implementa el diseño visual y las reglas de estilo responsivo. |
-| **JavaScript (ES6+)** | Gestiona la lógica, la interacción y la carga dinámica del contenido. |
-| **JSON** | Contenedor de datos estructurados para texto y proyectos. |
-| **WebP / SVG** | Formatos optimizados para imágenes y gráficos. |
-| **VS Code** | Entorno de desarrollo utilizado. |
+| Technology   | Description                                      |
+|--------------|--------------------------------------------------|
+| **HTML5**    | Defines the website structure and semantics       |
+| **CSS3**     | Visual design and responsive style rules          |
+| **JavaScript (ES6+)** | Logic, interaction, and dynamic loading  |
+| **JSON**     | Structured content for texts and projects         |
+| **WebP / SVG** | Optimized images and graphics                   |
+| **VS Code**  | Development environment                           |
 
----
+***
 
-## 4. Arquitectura del Sistema
+## 4. System Architecture
 
-La aplicación sigue una arquitectura modular basada en separación de responsabilidades:
+The application uses a modular architecture with clear separation of responsibilities:
 
 ```
-HTML (Estructura base)
- ├── CSS (Diseño y presentación)
+HTML (Base structure)
+ ├── CSS (Design and presentation)
  │    ├── index.css
  │    ├── desktop.css
  │    ├── tablet.css
  │    └── loader.css
- ├── JS (Lógica y comportamiento)
+ ├── JS (Logic and behavior)
  │    ├── main.js
  │    └── projects.js
- ├── DATA (Contenido dinámico)
+ ├── DATA (Dynamic content)
  │    ├── es.json
  │    ├── en.json
  │    └── projects.json
- └── ASSETS (Recursos visuales y tipografía)
+ └── ASSETS (Visuals and typography)
 ```
 
-**main.js** controla la inicialización, la carga de idioma, las animaciones y los eventos globales.  
-**projects.js** administra el renderizado dinámico de los proyectos utilizando los datos en `projects.json`.
+- **main.js:** Manages initialization, language loading, animations, and global events
+- **projects.js:** Handles dynamic rendering of projects using `projects.json`
 
----
+***
 
-## 5. Flujo de Ejecución
+## 5. Execution Flow
 
-1. **Inicialización**
-   - Se carga `index.html` junto con las hojas de estilo principales.
-   - Al completarse el evento `DOMContentLoaded`, se ejecuta `main.js`.
-2. **Configuración del idioma**
-   - Se determina el idioma inicial (por defecto: español).
-   - Se cargan los textos desde `es.json` o `en.json` según corresponda.
-3. **Renderizado de contenido**
-   - `projects.js` lee `projects.json` y construye los elementos visuales del portafolio.
-4. **Interacción del usuario**
-   - El sistema gestiona eventos como cambio de idioma, navegación y visualización de secciones.
-5. **Adaptabilidad**
-   - Los archivos CSS específicos definen estilos para distintos tamaños de pantalla, garantizando compatibilidad responsive.
+1. **Initialization**
+   - Loads `index.html` and core stylesheets.
+   - Upon `DOMContentLoaded`, runs `main.js`.
+2. **Language Setup**
+   - Determines initial language (default: Spanish).
+   - Loads texts from `es.json` or `en.json` as needed.
+3. **Content Rendering**
+   - `projects.js` reads `projects.json` and generates visual portfolio elements.
+4. **User Interaction**
+   - Handles events such as language change, navigation, and section viewing.
+5. **Responsiveness**
+   - Device-specific CSS ensures responsive display on all screen sizes.
 
----
+***
 
-## 6. Documentación Técnica por Archivo
+## 6. Technical Reference Per File
 
 ### 6.1. index.html
-Define la estructura principal del sitio.  
-Incluye los contenedores de las secciones y las referencias a las hojas de estilo y scripts externos.
+Defines the site's main structure and includes section containers as well as stylesheet and script references.
 
 ### 6.2. main.js
-Archivo principal del sistema. Gestiona la carga inicial, la configuración de idioma, las animaciones y los eventos globales.  
-Controla la interacción entre el contenido dinámico y los elementos del DOM.
+Main system file. Handles initial loading, language setup, animations, and global events.  
+Connects dynamic content and DOM elements.
 
 ### 6.3. projects.js
-Encargado del renderizado dinámico de los proyectos.  
-Obtiene los datos desde `projects.json` y genera los elementos HTML correspondientes.
+Manages dynamic rendering of projects.  
+Loads from `projects.json` and generates corresponding HTML elements.
 
-### 6.4. Archivos CSS
-- **index.css:** estilos base y variables globales.  
-- **desktop.css:** reglas de diseño para pantallas grandes.  
-- **tablet.css:** ajustes para pantallas medianas.  
-- **loader.css:** estilos y animaciones de carga inicial.
+### 6.4. CSS Files
+- **index.css:** Base styles and global variables  
+- **desktop.css:** Styles for large screens  
+- **tablet.css:** Styles for mid-sized screens  
+- **loader.css:** Loading styles and animations
 
-### 6.5. Archivos JSON
-- **es.json / en.json:** textos traducidos de la interfaz.  
-- **projects.json:** lista de proyectos con sus propiedades (nombre, descripción, imagen y URL).
+### 6.5. JSON Files
+- **es.json / en.json:** UI translated texts  
+- **projects.json:** List of projects (name, description, image, URL)
 
----
+***
 
-## 7. Mantenimiento y Extensibilidad
+## 7. Maintenance and Extensibility
 
-**Agregar un nuevo proyecto:**  
-1. Incluir la imagen del proyecto en `assets/img/projects/`.  
-2. Editar `data/projects.json` agregando una nueva entrada con el formato:
+**Add a new project:**  
+1. Add project image in `assets/img/projects/`  
+2. Edit `data/projects.json` and add a new entry:
 
 ```json
 {
-  "name": "Nuevo Proyecto",
-  "description": "Descripción breve del proyecto",
-  "image": "assets/img/projects/nuevo.webp",
-  "url": "https://miproyecto.com"
+  "name": "New Project",
+  "description": "Brief project description",
+  "image": "assets/img/projects/new.webp",
+  "url": "https://myproject.com"
 }
 ```
 
-El sistema detectará automáticamente la nueva entrada y la mostrará en la interfaz.  
+System automatically displays it in the interface.
 
-**Agregar un nuevo idioma:**  
-1. Crear un archivo JSON con el nombre del idioma (por ejemplo, `fr.json`).  
-2. Agregar el nuevo idioma en la lógica de carga de `main.js`.  
+**Add a new language:**  
+1. Create a JSON file (for example, `fr.json`)  
+2. Add the new language in the `main.js` loading logic
 
----
+***
 
-## 8. Autor
+## 8. Author
 
 **Emanuel López**  
-Desarrollador Web — Full Stack Developer
-[Portafolio profesional](https://emadev.neuradevsoftware.com)  
-[emanuel.arango1226@gmail.com](mailto:contacto@neuradevsoftware.com)
+Web Developer — Full Stack Developer  
+[Professional portfolio](https://emadev.neuradevsoftware.com)  
+[emanuel.arango1226@gmail.com](mailto:emanuel.arango1226@gmail.com)
 
----
+***
 
-© 2025. Este documento forma parte de la documentación técnica del proyecto Portafolio Web.  
-Su contenido puede ser reproducido con atribución al autor.
+© 2025. This document is part of the Web Portfolio technical documentation.  
+May be reproduced with attribution to the author.
