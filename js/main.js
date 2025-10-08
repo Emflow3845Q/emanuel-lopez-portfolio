@@ -203,6 +203,64 @@ document.querySelector('.go-top-container').addEventListener('click', () => {
     });
 });
 
+/*===== Manejo del Formulario Netlify =====*/
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('form');
+    const btnEnviar = document.getElementById('btn-enviar');
+    
+    if (form) {
+        // Manejar el envío del formulario
+        form.addEventListener('submit', function(e) {
+            // Cambiar texto del botón durante el envío
+            if (btnEnviar) {
+                const originalText = btnEnviar.textContent;
+                btnEnviar.textContent = 'Enviando...';
+                btnEnviar.disabled = true;
+                btnEnviar.style.opacity = '0.7';
+                
+                // Restaurar después de 10 segundos (por si hay error)
+                setTimeout(() => {
+                    btnEnviar.textContent = originalText;
+                    btnEnviar.disabled = false;
+                    btnEnviar.style.opacity = '1';
+                }, 10000);
+            }
+        });
+        
+        // Manejar éxito del formulario (Netlify redirige automáticamente)
+        form.addEventListener('netlifyFormsSuccess', function() {
+            if (btnEnviar) {
+                btnEnviar.textContent = '¡Mensaje Enviado!';
+                btnEnviar.style.backgroundColor = '#4CAF50';
+                btnEnviar.disabled = true;
+                
+                // Limpiar formulario
+                form.reset();
+                
+                setTimeout(() => {
+                    btnEnviar.textContent = 'Enviar mensaje';
+                    btnEnviar.style.backgroundColor = '';
+                    btnEnviar.disabled = false;
+                }, 3000);
+            }
+        });
+        
+        // Manejar error del formulario
+        form.addEventListener('netlifyFormsError', function() {
+            if (btnEnviar) {
+                btnEnviar.textContent = 'Error al enviar';
+                btnEnviar.style.backgroundColor = '#f44336';
+                
+                setTimeout(() => {
+                    btnEnviar.textContent = 'Enviar mensaje';
+                    btnEnviar.style.backgroundColor = '';
+                    btnEnviar.disabled = false;
+                }, 3000);
+            }
+        });
+    }
+});
+
 /*===== Clic derecho =====*/
 document.addEventListener('contextmenu', function (e) {
     e.preventDefault();
