@@ -131,9 +131,21 @@ function updateAllTexts(texts) {
         }
     }
 
+    // 🔹 Actualizar enlace del CV según idioma
+    const cvLink = document.getElementById('cv-link');
+    if (cvLink && texts.home) {
+        // Si existe la clave del idioma, actualiza el href
+        if (texts.home.cv_es && currentLanguage === 'es') {
+            cvLink.href = texts.home.cv_es;
+        } else if (texts.home.cv_en && currentLanguage === 'en') {
+            cvLink.href = texts.home.cv_en;
+        }
+    }
+
     // Actualizar textos de proyectos dinámicos
     updateProjectsTexts(texts);
 }
+
 
 // Función para actualizar textos de proyectos
 function updateProjectsTexts(texts) {
