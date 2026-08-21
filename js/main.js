@@ -649,7 +649,7 @@ function initContactForm() {
   if (!form) return;
   if (feedback) document.body.appendChild(feedback);
 
-  form.addEventListener("submit", (e) => {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
     const btn = form.querySelector(".btn-primary");
     const origText = btn.innerHTML;
@@ -661,21 +661,35 @@ function initContactForm() {
     btn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> ${UI_TRANSLATIONS[activeLanguage]["form.sending"]}`;
     btn.disabled = true;
 
-    setTimeout(() => {
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(new FormData(form)).toString()
+      });
+
+      if (!response.ok) throw new Error(`Netlify Forms respondió ${response.status}`);
+
       btn.innerHTML = origText;
       btn.disabled = false;
       form.reset();
       if (feedback) {
-        feedback.classList.remove("is-running");
+        feedback.classList.remove("is-running", "is-result-error");
         feedback.classList.add("is-complete");
-        setTimeout(() => {
-          feedback.classList.add(navigator.onLine === false ? "is-result-error" : "is-result-success");
-        }, 850);
-        setTimeout(() => {
-          feedback.classList.remove("is-complete", "is-result-success", "is-result-error");
-        }, 4200);
+        setTimeout(() => feedback.classList.add("is-result-success"), 850);
+        setTimeout(() => feedback.classList.remove("is-complete", "is-result-success"), 4200);
       }
-    }, 1500);
+    } catch (error) {
+      console.error("No se pudo enviar el formulario a Netlify:", error);
+      btn.innerHTML = origText;
+      btn.disabled = false;
+      if (feedback) {
+        feedback.classList.remove("is-running", "is-result-success");
+        feedback.classList.add("is-complete");
+        setTimeout(() => feedback.classList.add("is-result-error"), 850);
+        setTimeout(() => feedback.classList.remove("is-complete", "is-result-error"), 4200);
+      }
+    }
   });
 }
 

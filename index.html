@@ -333,7 +333,8 @@
 
       <!-- FORM -->
       <div class="reveal reveal-delay-2">
-        <form class="contact-form" id="contact-form" action="mailto:emanuel.arango1226@gmail.com" method="post" enctype="text/plain">
+        <form class="contact-form" id="contact-form" name="contacto-portafolio" method="POST" data-netlify="true" netlify>
+          <input type="hidden" name="form-name" value="contacto-portafolio">
           <div class="form-group">
             <label for="cf-name" data-i18n="form.name">Nombre</label>
             <input type="text" id="cf-name" name="nombre" data-placeholder-es="Tu nombre" data-placeholder-en="Your name" placeholder="Tu nombre" required autocomplete="name">
