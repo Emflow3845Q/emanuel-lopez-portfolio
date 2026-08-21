@@ -213,12 +213,13 @@ document.addEventListener("DOMContentLoaded", () => {
 // ── LANGUAGE SWITCHER ─────────────────────────
 const UI_TRANSLATIONS = {
   es: {
+    "meta.title": "Emanuel López — Desarrollador Web Full Stack",
     "nav.about": "Acerca de", "nav.skills": "Habilidades", "nav.experience": "Experiencia",
     "nav.projects": "Proyectos", "nav.contact": "Contacto", "nav.talk": "Hablemos",
     "hero.available": "[ disponible para proyectos ]",
     "hero.role": "Desarrollo sitios WordPress, software personalizado y soluciones digitales completas. También gestiono cPanel, DNS, hosting, correo corporativo, APIs y chatbots. Con sede en <strong>Medellín, Colombia</strong>.",
-    "hero.years": "años de experiencia", "hero.projects": "proyectos entregados", "hero.technologies": "tecnologías",
-    "about.label": "Sobre mí", "about.title": "Developer<br>con visión<br>de producto.",
+    "hero.years": "años de experiencia", "hero.projects": "proyectos entregados", "hero.technologies": "tecnologías", "hero.projectsButton": "Ver proyectos", "hero.downloadCv": "Descargar CV", "hero.posterWord": "CREACIÓN<br><span>DIGITAL</span>", "hero.posterLabel": "IDEAS / SISTEMAS", "hero.scroll": "Desplazar",
+    "about.label": "Sobre mí", "about.title": "Desarrollador<br>con visión<br>de producto.",
     "about.text1": "Soy un desarrollador especializado en la <strong>colaboración en equipo</strong> y en la <strong>implementación de soluciones tecnológicas efectivas</strong>. Con experiencia tanto en trabajo colaborativo como en labores individuales, mi enfoque abarca desde CMS como WordPress y Joomla hasta frameworks modernos como React y Laravel.",
     "about.text2": "Me apasiona crear sitios web que ofrezcan una <strong>experiencia de usuario excepcional</strong>: veloces, accesibles y con identidad visual fuerte. Cada proyecto es una oportunidad de construir algo que realmente funcione para las personas.",
     "skills.label": "Stack", "skills.title": "Habilidades & Tecnologías",
@@ -229,14 +230,15 @@ const UI_TRANSLATIONS = {
     "contact.tagline": "Cuéntame qué necesitas<br>construir. <span>Hablamos hoy.</span>",
     "contact.sub": "Freelance, colaboraciones o un puesto fijo — respondo yo mismo, sin intermediarios. Escríbeme con el contexto de tu proyecto y en menos de 24h tienes respuesta.",
     "form.name": "Nombre", "form.email": "Email", "form.subject": "Asunto", "form.message": "Mensaje",
-    "modal.project": "Proyecto", "modal.demo": "Ver proyecto"
+    "modal.project": "Proyecto", "modal.demo": "Ver proyecto", "form.submit": "Enviar mensaje", "form.sending": "Enviando...", "project.demoTitle": "Ver demo", "project.openDescription": "Ver descripción de", "slider.page": "Ir a la página", "modal.preview": "Vista previa de", "terminal.identity": "Emanuel López, Desarrollador Full Stack", "terminal.status": "disponible para proyectos <span class=\"terminal-cursor\">▌</span>", "feedback.transmission": "TRANSMISIÓN SALIENTE", "feedback.deployed": "Mensaje enviado", "feedback.code": "CÓDIGO", "feedback.build": "COMPILACIÓN", "feedback.server": "SERVIDOR", "feedback.inbox": "BANDEJA", "feedback.message": "mensaje", "feedback.connection": "estableciendo conexión segura...", "feedback.compiling": "compilando tu mensaje...", "feedback.delivered": "entregado a", "feedback.success": "Mensaje enviado", "feedback.error": "No se pudo enviar", "feedback.detail": "Gracias por escribirme. Te responderé pronto."
   },
   en: {
+    "meta.title": "Emanuel López — Full Stack Web Developer",
     "nav.about": "About", "nav.skills": "Skills", "nav.experience": "Experience",
     "nav.projects": "Projects", "nav.contact": "Contact", "nav.talk": "Let's talk",
     "hero.available": "[ available for projects ]",
     "hero.role": "I build WordPress websites, custom software, and complete digital solutions. I also manage cPanel, DNS, hosting, corporate email, APIs, and chatbots. Based in <strong>Medellin, Colombia</strong>.",
-    "hero.years": "years of experience", "hero.projects": "projects delivered", "hero.technologies": "technologies",
+    "hero.years": "years of experience", "hero.projects": "projects delivered", "hero.technologies": "technologies", "hero.projectsButton": "View projects", "hero.downloadCv": "Download CV", "hero.posterWord": "DIGITAL<br><span>CRAFT</span>", "hero.posterLabel": "IDEAS / SYSTEMS", "hero.scroll": "Scroll",
     "about.label": "About me", "about.title": "Developer<br>with product<br>vision.",
     "about.text1": "I am a developer focused on <strong>team collaboration</strong> and the <strong>delivery of effective technology solutions</strong>. My experience spans collaborative and independent work, from CMS platforms such as WordPress and Joomla to modern frameworks like React and Laravel.",
     "about.text2": "I love building websites with an <strong>exceptional user experience</strong>: fast, accessible, and visually distinctive. Every project is an opportunity to create something that genuinely works for people.",
@@ -248,7 +250,7 @@ const UI_TRANSLATIONS = {
     "contact.tagline": "Tell me what you need to<br>build. <span>Let's talk today.</span>",
     "contact.sub": "Freelance, collaborations, or a full-time role — I answer personally, with no middlemen. Share your project context and I will get back to you within 24 hours.",
     "form.name": "Name", "form.email": "Email", "form.subject": "Subject", "form.message": "Message",
-    "modal.project": "Project", "modal.demo": "View project"
+    "modal.project": "Project", "modal.demo": "View project", "form.submit": "Send message", "form.sending": "Sending...", "project.demoTitle": "View demo", "project.openDescription": "View description of", "slider.page": "Go to page", "modal.preview": "Preview of", "terminal.identity": "Emanuel López, Full Stack Developer", "terminal.status": "available for projects <span class=\"terminal-cursor\">▌</span>", "feedback.transmission": "OUTBOUND TRANSMISSION", "feedback.deployed": "Message deployed", "feedback.code": "CODE", "feedback.build": "BUILD", "feedback.server": "SERVER", "feedback.inbox": "INBOX", "feedback.message": "message", "feedback.connection": "establishing secure connection...", "feedback.compiling": "compiling your message...", "feedback.delivered": "delivered to", "feedback.success": "Message sent", "feedback.error": "Could not send", "feedback.detail": "Thanks for writing. I will get back to you soon."
   }
 };
 
@@ -303,6 +305,9 @@ function initLanguage() {
     document.querySelectorAll("[data-i18n]").forEach(element => {
       const value = UI_TRANSLATIONS[language][element.dataset.i18n];
       if (value) element.innerHTML = value;
+    });
+    document.querySelectorAll("[data-aria-es]").forEach(element => {
+      element.setAttribute("aria-label", element.dataset[`aria${language === "es" ? "Es" : "En"}`]);
     });
     document.querySelectorAll("[data-placeholder-es]").forEach(element => {
       element.placeholder = element.dataset[`placeholder${language === "es" ? "Es" : "En"}`];
@@ -415,10 +420,10 @@ function buildProjectCard(project, variant) {
   card.dataset.projectId = project.id;
   card.tabIndex = 0;
   card.setAttribute("role", "button");
-  card.setAttribute("aria-label", `Ver descripción de ${project.title}`);
+  card.setAttribute("aria-label", `${UI_TRANSLATIONS[activeLanguage]["project.openDescription"]} ${project.title}`);
 
   const demoLink = project.demo
-    ? `<a href="${project.demo}" target="_blank" rel="noopener" class="overlay-link" title="Ver demo">
+    ? `<a href="${project.demo}" target="_blank" rel="noopener" class="overlay-link" title="${UI_TRANSLATIONS[activeLanguage]["project.demoTitle"]}">
         <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
           <polyline points="15 3 21 3 21 9"/>
@@ -462,7 +467,7 @@ function initProjectModal() {
 
   function openModal(project) {
     image.src = project.image;
-    image.alt = `Vista previa de ${project.title}`;
+    image.alt = `${UI_TRANSLATIONS[activeLanguage]["modal.preview"]} ${project.title}`;
     image.hidden = false;
     title.textContent = project.title;
     description.textContent = project.desc;
@@ -568,7 +573,7 @@ function initProjectsSlider(pageCount) {
   for (let i = 0; i < pageCount; i++) {
     const dot = document.createElement("button");
     dot.className = "slider-dot" + (i === 0 ? " active" : "");
-    dot.setAttribute("aria-label", `Ir a la página ${i + 1}`);
+    dot.setAttribute("aria-label", `${UI_TRANSLATIONS[activeLanguage]["slider.page"]} ${i + 1}`);
     dot.addEventListener("click", () => goToPage(i));
     dotsWrap.appendChild(dot);
   }
@@ -653,7 +658,7 @@ function initContactForm() {
       feedback.classList.add("is-running");
     }
 
-    btn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Enviando...`;
+    btn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> ${UI_TRANSLATIONS[activeLanguage]["form.sending"]}`;
     btn.disabled = true;
 
     setTimeout(() => {
