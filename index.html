@@ -1,343 +1,437 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portafolio | Emanuel López Desarrollador Web">
-    <meta name="robots" content="index,follow">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Emanuel López — Full Stack Web Developer especializado en WordPress, software personalizado, cPanel, DNS, hosting y soluciones digitales." />
+  <meta name="keywords" content="Full Stack Developer, WordPress, desarrollo web personalizado, cPanel, DNS, hosting, Medellín, Colombia" />
+  <meta name="author" content="Emanuel López" />
 
-    <title>Emanuel López | Portafolio</title>
+  <!-- Open Graph -->
+  <meta property="og:title" content="Emanuel López — Full Stack Developer" />
+  <meta property="og:description" content="Portfolio digital. Desarrollo web moderno, escalable y con experiencia de usuario excepcional." />
+  <meta property="og:type" content="website" />
 
-    <!-- Librerías -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <title>Emanuel López — Full Stack Web Developer</title>
 
-    <!-- Hojas de estilo -->
-    <link rel="stylesheet" href="./assets/stylesheet/loader.css">
-    <link rel="stylesheet" href="./assets/stylesheet/index.css">
-    <link rel="stylesheet" href="./assets/stylesheet/tablet.css" media="screen and (min-width: 760px)">
-    <link rel="stylesheet" href="./assets/stylesheet/desktop.css" media="screen and (min-width: 980px)">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Preload fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-    <!-- Fuentes -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
-
-    <!-- Fontawesome -->
-    <script src="https://kit.fontawesome.com/ae0fd6f99f.js" crossorigin="anonymous"></script>
-
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="./assets/img/logo.webp" type="image/x-icon">
+  <link rel="stylesheet" href="./css/main.css" />
 </head>
-
 <body>
-    <div class="container--loader">
-        <div class="loader"></div>
+
+<!-- PROGRESS BAR -->
+<div id="progress-bar"></div>
+
+<!-- ═══════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════ -->
+<nav id="nav">
+  <a href="#hero" class="nav-logo">
+    <span class="nav-logo-dot"></span>
+    Emanuel López
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="#about" data-i18n="nav.about">Acerca de</a></li>
+    <li><a href="#skills" data-i18n="nav.skills">Habilidades</a></li>
+    <li><a href="#experience" data-i18n="nav.experience">Experiencia</a></li>
+    <li><a href="#projects" data-i18n="nav.projects">Proyectos</a></li>
+  </ul>
+
+  <div class="nav-actions">
+    <a href="#contact" class="nav-cta"><span class="nav-cta-bracket">[</span> <span data-i18n="nav.talk">Hablemos</span> <span class="nav-cta-bracket">]</span></a>
+    <button class="language-toggle" id="language-toggle" type="button" aria-label="Cambiar idioma">EN</button>
+  </div>
+
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menú">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu">
+  <a href="#about"       class="mobile-nav-link" data-i18n="nav.about">Acerca de</a>
+  <a href="#skills"      class="mobile-nav-link" data-i18n="nav.skills">Habilidades</a>
+  <a href="#experience"  class="mobile-nav-link" data-i18n="nav.experience">Experiencia</a>
+  <a href="#projects"    class="mobile-nav-link" data-i18n="nav.projects">Proyectos</a>
+  <a href="#contact"     class="mobile-nav-link" data-i18n="nav.contact">Contacto</a>
+</div>
+
+<!-- ═══════════════════════════════════
+     HERO
+═══════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-bg">
+    <div class="hero-grid"></div>
+    <div class="hero-orb hero-orb-1"></div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-tag" data-i18n="hero.available">[ disponible para proyectos ]</div>
+
+    <h1 class="hero-greeting">
+      <span class="line"><span>¡Hola! Soy</span></span>
+      <span class="line"><span class="hero-name">Emanuel</span></span>
+      <span class="line"><span>López.</span></span>
+    </h1>
+
+    <p class="hero-role" data-i18n="hero.role">
+      Desarrollo sitios WordPress, software personalizado y soluciones digitales completas. También gestiono cPanel, DNS, hosting, correo corporativo, APIs y chatbots. Con sede en <strong>Medellín, Colombia</strong>.
+    </p>
+
+    <div class="hero-ctas">
+      <a href="#projects" class="btn-primary">
+        Ver proyectos
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </a>
+      <a href="https://drive.google.com/uc?export=download&id=1GVbXo800HaxfZQyt7FzXdvuDBdILMEUn" class="btn-secondary" target="_blank" rel="noopener">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        Descargar CV
+      </a>
     </div>
 
-    <header class="header">
-        <img src="./assets/img/logo.webp" alt="Logo Portafolio" class="logo__header">
+    <div class="hero-status">
+      <span><strong>4+</strong> <span data-i18n="hero.years">años de experiencia</span></span>
+      <span class="divider">/</span>
+      <span><strong>15+</strong> <span data-i18n="hero.projects">proyectos entregados</span></span>
+      <span class="divider">/</span>
+      <span><strong>10+</strong> <span data-i18n="hero.technologies">tecnologías</span></span>
+    </div>
+  </div>
 
-        <nav class="nav_menu not-active">
-            <a href="#home" class="active" data-section="menu" data-value="item1">INICIO</a>
-            <a href="#acerdeDe" data-section="menu" data-value="item2">ACERCA DE</a>
-            <a href="#Competencias" data-section="menu" data-value="item3">COMPETENCIAS</a>
-            <a href="#experiencia" data-section="menu" data-value="item4">EXPERIENCIA</a>
-            <a href="#proyectos" data-section="menu" data-value="item5">PROYECTOS</a>
-            <a href="#contacto" data-section="menu" data-value="item6">CONTACTO</a>
+  <div class="hero-side-visual" aria-hidden="true">
+    <div class="hero-poster">
+      <div class="hero-poster-number">01</div>
+      <div class="hero-poster-word">DIGITAL<br><span>CRAFT</span></div>
+      <div class="hero-poster-frame hero-poster-frame-one"></div>
+      <div class="hero-poster-frame hero-poster-frame-two"></div>
+      <div class="hero-poster-beam"></div>
+      <div class="hero-poster-label hero-poster-label-top">IDEAS / SYSTEMS</div>
+      <div class="hero-poster-label hero-poster-label-bottom">EMANUEL LÓPEZ — 2026</div>
+    </div>
+  </div>
 
-            <!-- Idiomas de la página -->
-            <div id="flags" class="flags">
-                <div class="flags__item" data-language="es">
-                    <img src="./assets/img/icon-spain.webp" alt="Español/Spain">
-                </div>
-                <div class="flags__item" data-language="en">
-                    <img src="./assets/img/icon-en.webp" alt="Inglés/English">
-                </div>
-            </div>
-        </nav>
+  <div class="hero-scroll">
+    <div class="hero-scroll-line"></div>
+    <span class="hero-scroll-text">Scroll</span>
+  </div>
+</section>
 
-        <div id="button" class="btn not-active">
-            <span></span>
-            <span></span>
-            <span></span>
+<!-- ═══════════════════════════════════
+     ABOUT
+═══════════════════════════════════ -->
+<section id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div>
+        <div class="reveal">
+          <div class="section-label" data-i18n="about.label">Sobre mí</div>
+          <h2 class="section-title" data-i18n="about.title">Developer<br>con visión<br>de producto.</h2>
         </div>
-    </header>
 
-    <main>
-        <!-- Home -->
-        <section class="home" id="home">
-            <picture class="container_image-home" data-aos="zoom-in">
-                <img class="image_home" src="./assets/img/programing.gif" alt="codigo-binario">
-            </picture>
+        <p class="about-text reveal reveal-delay-1" data-i18n="about.text1">
+          Soy un desarrollador especializado en la <strong>colaboración en equipo</strong> y en la <strong>implementación de soluciones tecnológicas efectivas</strong>. Con experiencia tanto en trabajo colaborativo como en labores individuales, mi enfoque abarca desde CMS como WordPress y Joomla hasta frameworks modernos como React y Laravel.
+        </p>
 
-            <div class="home_info">
-                <div class="container_text-info">
-                    <p class="home_text-1" data-section="home" data-value="home_text-1">Hola! Soy</p>
-                    <p class="home_text-2">Emanuel López</p>
-                </div>
+        <p class="about-text reveal reveal-delay-2" data-i18n="about.text2">
+          Me apasiona crear sitios web que ofrezcan una <strong>experiencia de usuario excepcional</strong>: veloces, accesibles y con identidad visual fuerte. Cada proyecto es una oportunidad de construir algo que realmente funcione para las personas.
+        </p>
+      </div>
 
-                <div>
-                    <p class="home_text-3 text-type" data-section="home" data-value="home_text-3">Desarrollador Full
-                        Stack</p>
-                </div>
-
-                <div class="container_parrafo-info">
-                    <!-- <p data-section="home" data-value="parrafo-info"></p> -->
-                </div>
-
-                <div class="container_button">
-                    <a id="cv-link" href="https://drive.google.com/uc?export=download&id=1GVbXo800HaxfZQyt7FzXdvuDBdILMEUn"
-                        download="CV_Emanuel_Lopez.pdf">
-                        <button class="cv_button" data-section="home" data-value="cv_button">Descargar CV</button>
-                    </a>
-                    <a href="https://wa.me/573004902545" target="_blank">
-                        <button class="contact_button" data-section="home" data-value="contact_button">Contactar</button>
-                    </a>
-                </div>
-            </div>
-
-            <div class="links">
-                <a href="https://www.linkedin.com/in/emanuel-l%C3%B3pez-490899308/" target="_blank">
-                    <img src="./assets/img/icon-linkedin.webp" alt="LinkedIn" class="icon-linkedin">
-                </a>
-                <a href="https://github.com/Emflow3845Q" target="_blank">
-                    <img src="./assets/img/icon-github.webp" alt="GitHub" class="icon-github">
-                </a>
-                <a href="https://www.instagram.com/lophexz_/" target="_blank">
-                    <img src="./assets/img/icon-instagram.webp" alt="Instagram" class="icon-instagram">
-                </a>
-            </div>
-        </section>
-
-        <!-- Acerde De -->
-        <section class="acerdeDe" id="acerdeDe">
-            <h1 data-section="sobre-mi" data-value="title" data-aos="fade-up">ACERCA DE</h1>
-
-            <div class="container_content-acerdeDe" data-aos="fade-right">
-                <div class="container_texto-acerdeDe">
-                    <!-- <span class="title_acerdeDe"></span> -->
-                    <span class="texto_acerdeDe" data-section="sobre-mi" data-value="texto_acerdeDe">
-                        Soy un desarrollador especializado en trabajo en equipo y en soluciones tecnológicas efectivas.
-                        Tengo experiencia tanto en colaboración como en trabajo individual. Mi enfoque se centra en
-                        gestores de contenido como WordPress y Joomla, así como en frameworks como Laravel. Además, soy
-                        experto en resolver problemas informáticos y en configuración de correos electrónicos. Me
-                        apasiona crear sitios web con una experiencia de usuario excepcional.
-                    </span>
-                </div>
-
-                <picture class="container_image-acerdeDe">
-                    <img class="image_acerdeDe" src="./assets/img/programing-text.gif" alt="Ilustración mujer y café">
-                </picture>
-            </div>
-        </section>
-
-        <!-- Competencias -->
-        <section class="Competencias" id="Competencias">
-            <h1 data-section="Competencias" data-value="title" data-aos="fade-up">COMPETENCIAS</h1>
-
-            <div class="cards_container--Competencias">
-                <div class="cards--Competencias" data-aos="fade-up" data-aos-duration="500">
-                    <img src="./assets/img/skills/html.svg" alt="HTML">
-                    <p>HTML 5</p>
-                </div>
-
-                <div class="cards--Competencias" data-aos="fade-up" data-aos-duration="700">
-                    <img src="./assets/img/skills/css.svg" alt="CSS">
-                    <p>CSS 3</p>
-                </div>
-
-                <div class="cards--Competencias" data-aos="fade-up" data-aos-duration="900">
-                    <img src="./assets/img/skills/javascript.svg" alt="JavaScript">
-                    <p>JavaScript</p>
-                </div>
-
-                <div class="cards--Competencias" data-aos="fade-up" data-aos-duration="1100">
-                    <img src="./assets/img/skills/php.svg" alt="PHP">
-                    <p>PHP</p>
-                </div>
-
-                <div class="cards--Competencias" data-aos="fade-up" data-aos-duration="1100">
-                    <img src="./assets/img/skills/lua.svg" alt="Lua">
-                    <p>Lua</p>
-                </div>
-
-                <div class="cards--Competencias" data-aos="fade-up" data-aos-duration="1100">
-                    <img src="./assets/img/skills/python.svg" alt="Python">
-                    <p>Python</p>
-                </div>
-
-                <div class="cards--Competencias" data-aos="fade-up" data-aos-duration="1100">
-                    <img src="./assets/img/skills/react.svg" alt="React">
-                    <p>React</p>
-                </div>
-
-                <div class="cards--Competencias" data-aos="fade-up" data-aos-duration="500">
-                    <img src="./assets/img/skills/icon-tailwind.webp" alt="Tailwind">
-                    <p>Tailwind</p>
-                </div>
-
-                <div class="cards--Competencias" data-aos="fade-up" data-aos-duration="500">
-                    <img src="./assets/img/skills/vite.svg" alt="Vite">
-                    <p>Vite</p>
-                </div>
-
-                <div class="cards--Competencias" data-aos="fade-up" data-aos-duration="700">
-                    <img src="./assets/img/skills/icon-git.webp" alt="Git">
-                    <p>Git</p>
-                </div>
-
-                <div class="cards--Competencias" data-aos="fade-up" data-aos-duration="1100">
-                    <img src="./assets/img/skills/icon-trello.webp" alt="Trello">
-                    <p>Trello</p>
-                </div>
-
-                <div class="cards--Competencias" data-aos="fade-up" data-aos-duration="1100">
-                    <img src="./assets/img/skills/cpanel.svg" alt="cPanel">
-                    <p>cPanel</p>
-                </div>
-
-                <div class="cards--Competencias" data-aos="fade-up" data-aos-duration="1100">
-                    <img src="./assets/img/skills/wordpress.svg" alt="WordPress">
-                    <p>WordPress</p>
-                </div>
-
-                <div class="cards--Competencias" data-aos="fade-up" data-aos-duration="1100">
-                    <img src="./assets/img/skills/shopify.svg" alt="Shopify">
-                    <p>Shopify</p>
-                </div>
-
-                <div class="cards--Competencias" data-aos="fade-up" data-aos-duration="900">
-                    <img src="./assets/img/skills/icon-github-hab.webp" alt="GitHub">
-                    <p>Github</p>
-                </div>
-                  <div class="cards--Competencias" data-aos="fade-up" data-aos-duration="900">
-                    <img src="./assets/img/skills/FiveM.png" alt="FiveM">
-                    <p>FiveM</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Experiencia -->
-        <section class="experiencia" id="experiencia">
-            <h1 data-section="experiencia" data-value="title" data-aos="fade-up">EXPERIENCIA</h1>
-
-            <div class="cards_container--experiencia">
-                <div class="cards--experiencia" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
-                    <div class="logo-container">
-                        <img src="./assets/img/company/logo-latinoamericahosting.webp" alt="Logo - Latinoamérica Hosting">
-                    </div>
-                    <div class="container_texto--experiencia">
-                        <p class="cargo" data-section="experiencia" data-value="experiencia1">Resolución de Problemas</p>
-                        <p class="tiempo" data-section="experiencia" data-value="tiempo-experiencia1">Agosto 2022 / Abril 2024</p>
-                    </div>
-                </div>
-
-                <div class="cards--experiencia" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
-                    <div class="logo-container">
-                        <img src="./assets/img/company/xtrategic.webp" alt="Logo - Xtrategic">
-                    </div>
-                    <div class="container_texto--experiencia">
-                        <p class="cargo" data-section="experiencia" data-value="experiencia3">Freelance</p>
-                        <p class="tiempo">2025 / Actualmente</p>
-                    </div>
-                </div>
-                
-                <div class="cards--experiencia" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
-                    <div class="logo-container">
-                        <img src="./assets/img/company/neuradev-software.webp" alt="Logo - Neuradev-Software">
-                    </div>
-                    <div class="container_texto--experiencia">
-                        <p class="cargo" data-section="experiencia" data-value="experiencia3">Freelance</p>
-                        <p class="tiempo" data-section="experiencia" data-value="tiempo-experiencia1">2025 / Actualmente</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Proyectos -->
-        <section class="proyectos" id="proyectos">
-            <h1 data-section="proyectos" data-value="title" data-aos="fade-up">PROYECTOS</h1>
-            <div class="cards_container--proyectos" id="projects-container">
-            </div>
-        </section>
-
-        <!-- Contacto -->
-        <section class="contacto" id="contacto">
-            <h1 data-section="contacto" data-value="title" data-aos="fade-up">CONTÁCTANOS</h1>
-
-            <div class="container_box--contacto" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-                <div class="container--contacto">
-                    <div class="container_text--contacto">
-                        <p data-section="contacto" data-value="text">
-                            ¿Tienes alguna pregunta o comentario? Completa el formulario y nos pondremos en contacto
-                            contigo lo antes posible.
-                        </p>
-                    </div>
-
-                    <form id="form" class="form-contact" name="contacto-portafolio" method="POST" netlify>
-                        <input type="hidden" name="form-name" value="contacto-portafolio">
-                        <div class="form-group">
-                            <input id="nombre" type="text" name="name" placeholder="Nombre completo" required>
-                            <input id="email" type="email" name="email" placeholder="Correo electrónico" required>
-                        </div>
-                        <input id="asunto" type="text" name="asunto" placeholder="Asunto" required>
-                        <textarea id="mensaje" cols="20" rows="4" name="message"
-                            placeholder="Escribe tu mensaje aquí..." required></textarea>
-
-                        <div class="btn_form--contacto">
-                            <button id="btn-enviar" type="submit" data-section="contacto" data-value="btn-enviar">Enviar
-                                mensaje</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="contianer--footer">
-            <div class="container_redes-footer">
-                <a href="https://www.linkedin.com/in/emanuel-l%C3%B3pez-490899308/" target="_blank">
-                    <img src="./assets/img/icon-linkedin.webp" alt="LinkedIn" class="icon-linkedin">
-                </a>
-                <a href="https://github.com/Emflow3845Q" target="_blank">
-                    <img src="./assets/img/icon-github.webp" alt="GitHub" class="icon-github">
-                </a>
-                <a href="https://www.instagram.com/lophexz_/" target="_blank">
-                    <img src="./assets/img/icon-instagram.webp" alt="Instagram" class="icon-instagram">
-                </a>
-            </div>
-
-            <div class="container_text--footer">
-                <span>Copyright © | Coded with</span>
-                <span>by</span>
-                <span>Emanuel López Arango</span>
-            </div>
+      <div class="about-visual reveal">
+        <div class="terminal-panel">
+          <div class="terminal-bar">
+            <span class="terminal-dot"></span>
+            <span class="terminal-dot"></span>
+            <span class="terminal-dot"></span>
+            <span class="terminal-path">~/emanuel-lopez</span>
+          </div>
+          <div class="terminal-body">
+            <p class="terminal-line"><span class="terminal-prompt">$</span> whoami</p>
+            <p class="terminal-out">Emanuel López, Full Stack Developer</p>
+            <p class="terminal-line"><span class="terminal-prompt">$</span> cat stack.txt</p>
+            <p class="terminal-out">React · Node.js · WordPress · Python</p>
+            <p class="terminal-line"><span class="terminal-prompt">$</span> status --check</p>
+            <p class="terminal-out terminal-accent">disponible para proyectos <span class="terminal-cursor">▌</span></p>
+          </div>
         </div>
-    </footer>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <div class="go-top-container">
-        <div class="go-top-button">
-            <i class="fas fa-chevron-up"></i>
-        </div>
+<!-- ═══════════════════════════════════
+     SKILLS
+═══════════════════════════════════ -->
+<section id="skills">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-label" data-i18n="skills.label">Stack</div>
+        <h2 class="section-title skills-title" data-i18n="skills.title">Habilidades & Tecnologías</h2>
+      </div>
     </div>
 
-    <!-- Archivo Js -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <div class="skills-grid" id="skills-grid"></div>
+  </div>
+</section>
 
-    <!-- Librería de animaciones -->
-    <script>
-        AOS.init();
-    </script>
+<!-- ═══════════════════════════════════
+     EXPERIENCE
+═══════════════════════════════════ -->
+<section id="experience">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="reveal">
+        <div class="section-label" data-i18n="experience.label">Trayectoria</div>
+        <h2 class="section-title" data-i18n="experience.title">Experiencia<br>Profesional</h2>
+      </div>
+    </div>
 
-    <!-- Main -->
-    <script src="./js/main.js"></script>
+    <div class="exp-timeline" id="exp-timeline"></div>
+  </div>
+</section>
 
-    <!-- Proyectos -->
-    <script src="./js/projects.js"></script>
+<!-- ═══════════════════════════════════
+     PROJECTS
+═══════════════════════════════════ -->
+<section id="projects">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="reveal">
+        <div class="section-label" data-i18n="projects.label">Trabajo</div>
+        <h2 class="section-title" data-i18n="projects.title">Proyectos<br>Seleccionados</h2>
+      </div>
+    </div>
+
+    <div class="projects-filter reveal">
+      <button class="filter-btn active" data-filter="all" data-i18n="filters.all">Todos</button>
+      <button class="filter-btn" data-filter="webapps" data-i18n="filters.webapps">Aplicaciones Web</button>
+      <button class="filter-btn" data-filter="corporate" data-i18n="filters.corporate">Corporativas</button>
+      <button class="filter-btn" data-filter="landing" data-i18n="filters.landing">Landing Pages</button>
+      <button class="filter-btn" data-filter="ecommerce" data-i18n="filters.ecommerce">E-commerce</button>
+      <button class="filter-btn" data-filter="desktop" data-i18n="filters.desktopApps">Aplicaciones de Escritorio</button>
+      <button class="filter-btn" data-filter="maintenance" data-i18n="filters.maintenance">Mantenimiento</button>
+    </div>
+
+    <div class="projects-slider">
+      <div class="projects-track" id="projects-track"></div>
+    </div>
+
+    <div class="slider-controls">
+      <div class="slider-dots" id="slider-dots"></div>
+      <div class="slider-arrows">
+        <button class="slider-arrow" id="slider-prev" aria-label="Proyectos anteriores">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button class="slider-arrow" id="slider-next" aria-label="Siguientes proyectos">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="project-modal" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="project-modal-title" hidden>
+  <div class="project-modal-backdrop" data-modal-close></div>
+  <div class="project-modal-panel">
+    <button class="project-modal-close" type="button" aria-label="Cerrar descripción del proyecto" data-modal-close>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="6" y1="6" x2="18" y2="18" />
+        <line x1="18" y1="6" x2="6" y2="18" />
+      </svg>
+    </button>
+    <img class="project-modal-image" id="project-modal-image" src="" alt="">
+    <div class="project-modal-content">
+      <div class="section-label" data-i18n="modal.project">Proyecto</div>
+      <h2 class="project-modal-title" id="project-modal-title"></h2>
+      <p class="project-modal-description" id="project-modal-description"></p>
+      <div class="project-modal-tags" id="project-modal-tags"></div>
+      <a class="project-modal-demo btn-primary" id="project-modal-demo" data-i18n="modal.demo" href="#" target="_blank" rel="noopener">Ver proyecto</a>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════
+     CONTACT
+═══════════════════════════════════ -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-label" data-i18n="contact.label">Contacto</div>
+          <h2 class="section-title" data-i18n="contact.title">¿Trabajamos<br>juntos?</h2>
+      </div>
+    </div>
+
+    <div class="contact-grid">
+      <div class="reveal">
+        <p class="contact-tagline" data-i18n="contact.tagline">
+          Cuéntame qué necesitas<br>construir. <span>Hablamos hoy.</span>
+        </p>
+        <p class="contact-sub" data-i18n="contact.sub">
+          Freelance, colaboraciones o un puesto fijo — respondo yo mismo, sin intermediarios. Escríbeme con el contexto de tu proyecto y en menos de 24h tienes respuesta.
+        </p>
+
+        <div class="contact-socials">
+          <a href="https://www.linkedin.com/in/emanuel-l%C3%B3pez-490899308/" target="_blank" rel="noopener" class="social-link">
+            <div class="social-icon">
+              <img src="https://api.iconify.design/simple-icons:linkedin.svg?color=%23ffffff" alt="LinkedIn" onerror="this.parentElement.innerHTML='in'">
+            </div>
+            <div>
+              <div class="social-info-label">LinkedIn</div>
+              <div class="social-info-value">Emanuel López</div>
+            </div>
+            <svg class="social-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+
+          <a href="https://wa.me/573004902545" target="_blank" rel="noopener" class="social-link">
+            <div class="social-icon">
+              <img src="https://api.iconify.design/simple-icons:whatsapp.svg?color=%23ffffff" alt="WhatsApp" onerror="this.parentElement.innerHTML='wa'">
+            </div>
+            <div>
+              <div class="social-info-label">WhatsApp</div>
+              <div class="social-info-value">3004902545</div>
+            </div>
+            <svg class="social-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+
+          <a href="https://www.instagram.com/lophexz_/" target="_blank" rel="noopener" class="social-link">
+            <div class="social-icon">
+              <img src="https://api.iconify.design/simple-icons:instagram.svg?color=%23ffffff" alt="Instagram" onerror="this.parentElement.innerHTML='ig'">
+            </div>
+            <div>
+              <div class="social-info-label">Instagram</div>
+              <div class="social-info-value">@lophexz_</div>
+            </div>
+            <svg class="social-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- FORM -->
+      <div class="reveal reveal-delay-2">
+        <form class="contact-form" id="contact-form" action="mailto:emanuel.arango1226@gmail.com" method="post" enctype="text/plain">
+          <div class="form-group">
+            <label for="cf-name" data-i18n="form.name">Nombre</label>
+            <input type="text" id="cf-name" name="nombre" data-placeholder-es="Tu nombre" data-placeholder-en="Your name" placeholder="Tu nombre" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="cf-email" data-i18n="form.email">Email</label>
+            <input type="email" id="cf-email" name="email" data-placeholder-es="tu@email.com" data-placeholder-en="you@email.com" placeholder="tu@email.com" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="cf-subject" data-i18n="form.subject">Asunto</label>
+            <input type="text" id="cf-subject" name="asunto" data-placeholder-es="Proyecto, colaboración…" data-placeholder-en="Project, collaboration…" placeholder="Proyecto, colaboración…" required>
+          </div>
+          <div class="form-group">
+            <label for="cf-msg" data-i18n="form.message">Mensaje</label>
+            <textarea id="cf-msg" name="mensaje" data-placeholder-es="Cuéntame sobre tu proyecto…" data-placeholder-en="Tell me about your project…" placeholder="Cuéntame sobre tu proyecto…" required></textarea>
+          </div>
+          <div class="form-submit">
+            <button type="submit" class="btn-primary">
+              Enviar mensaje
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"/>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+              </svg>
+            </button>
+          </div>
+          <div class="mail-deploy" id="form-feedback" aria-live="polite">
+            <div class="mail-deploy-scan"></div>
+            <div class="mail-deploy-head">
+              <span class="mail-deploy-beacon"></span>
+              <div>
+                <small>OUTBOUND TRANSMISSION</small>
+                <strong>Message deployed</strong>
+              </div>
+              <span class="mail-deploy-code">0x7F</span>
+            </div>
+            <div class="mail-deploy-pipeline" aria-hidden="true">
+              <span class="mail-deploy-track"></span>
+              <span class="mail-deploy-packet"></span>
+              <div class="mail-deploy-node is-active">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="8 9 11 12 8 15"/><line x1="13" y1="15" x2="17" y2="15"/></svg>
+                <small>CODE</small>
+              </div>
+              <div class="mail-deploy-node">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="12 3 4 7 12 11 20 7 12 3"/><polyline points="4 12 12 16 20 12"/><polyline points="4 17 12 21 20 17"/></svg>
+                <small>BUILD</small>
+              </div>
+              <div class="mail-deploy-node">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 8h.01M11 8h.01M15 8h.01M7 12h10M7 16h6"/></svg>
+                <small>SERVER</small>
+              </div>
+              <div class="mail-deploy-node">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>
+                <small>INBOX</small>
+              </div>
+            </div>
+            <div class="mail-deploy-command"><span>$</span> mail.send(<b>message</b>)<i></i></div>
+            <div class="mail-deploy-output">
+              <span><b>01</b> establishing secure connection...</span>
+              <span><b>02</b> compiling your message...</span>
+              <span><b>03</b> delivered to <em>emanuel.arango1226@gmail.com</em></span>
+            </div>
+            <div class="mail-deploy-progress"><span></span></div>
+            <div class="mail-deploy-result">
+              <div class="mail-deploy-result-icon mail-deploy-success-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+              </div>
+              <div class="mail-deploy-result-icon mail-deploy-error-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18" /><line x1="18" y1="6" x2="6" y2="18" /></svg>
+              </div>
+              <strong class="mail-deploy-success-text">Mensaje enviado</strong>
+              <strong class="mail-deploy-error-text">No se pudo enviar</strong>
+              <span class="mail-deploy-result-detail">Gracias por escribirme. Te responderé pronto.</span>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     FOOTER
+═══════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <p class="footer-copy">
+      © 2026 <span>Emanuel López</span> — Medellín, Colombia
+    </p>
+    <a href="#hero" class="footer-back-top">
+      Volver al inicio
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="12" y1="19" x2="12" y2="5"/>
+        <polyline points="5 12 12 5 19 12"/>
+      </svg>
+    </a>
+  </div>
+</footer>
+
+<script src="./js/main.js"></script>
 </body>
-
 </html>

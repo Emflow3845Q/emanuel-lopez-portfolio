@@ -1,204 +1,137 @@
-# Web Portfolio
+# Portfolio Premium — Emanuel López
+### Full Stack Developer · 2026
 
-[![HTML5](https://img.shields.io/badge/HTML5-Structure-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![CSS3](https://img.shields.io/badge/CSS3-Design-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![JSON](https://img.shields.io/badge/JSON-Dynamic%20Data-000000?logo=json&logoColor=white)](https://www.json.org/)
-[![License](https://img.shields.io/badge/License-Attribution-green.svg)]()
-
-> Professional single-page application (SPA) for a modern online presence, developed with **maintainability**, **modularity**, and **scalability** in mind.
+Un portfolio digital premium diseñado con estética dark mode sofisticada, animaciones cinematográficas y experiencia visual de nivel agencia creativa.
 
 ---
 
-## Table of Contents
+## 🚀 Cómo usar
 
-- [Overview](#overview)
-- [Features](#features)
-- [Architecture](#architecture)
-- [Technology Stack](#technology-stack)
-- [Project Structure](#project-structure)
-- [File Reference](#file-reference)
-- [Execution Flow](#execution-flow)
-- [Maintenance](#maintenance)
-- [Author](#author)
-- [License](#license)
-
----
-
-## Overview
-
-**Web Portfolio** is a modular SPA designed as a professional digital portfolio.  
-It offers dynamic and internationalized content management with a responsive interface for desktop, tablet, and mobile devices.
-
----
-
-## Features
-
-- Modular and organized file structure  
-- Multi-language support (Spanish & English)  
-- Responsive design for all device sizes  
-- Dynamic content loading from JSON files  
-- Performance optimized (WebP images, local fonts)
-
----
-
-## Architecture
-
+### Opción A — Abrir directo (recomendado para preview rápido)
 ```
-HTML (Base structure)
- ├── CSS (Design and presentation)
- │    ├── index.css
- │    ├── desktop.css
- │    ├── tablet.css
- │    └── loader.css
- ├── JS (Logic and behavior)
- │    ├── main.js
- │    └── projects.js
- ├── DATA (Dynamic content)
- │    ├── es.json
- │    ├── en.json
- │    └── projects.json
- └── ASSETS (Fonts and images)
+Simplemente abre index.html en cualquier navegador moderno.
 ```
 
-- **main.js**: Initialization, language loading, animations, and global events  
-- **projects.js**: Dynamic rendering of projects from `projects.json`
+> ⚠️ Algunas fuentes de Google Fonts requieren conexión a internet. Si ves fuentes genéricas sin internet, es normal.
+
+### Opción B — Servidor local (recomendado para producción)
+```bash
+# Con Python
+python3 -m http.server 3000
+
+# Con Node.js
+npx serve .
+
+# Con VS Code
+Instala "Live Server" y haz clic en "Go Live"
+```
+Luego abre: `http://localhost:3000`
 
 ---
 
-## Technology Stack
-
-| Technology          | Purpose                                            |
-|---------------------|----------------------------------------------------|
-| **HTML5**           | Structure and semantics                            |
-| **CSS3**            | Visual and responsive design                       |
-| **JavaScript (ES6+)** | Logic and dynamic loading                        |
-| **JSON**            | Structured storage for texts and projects          |
-| **WebP / SVG**      | Optimized images and graphics                      |
-| **VS Code**         | Development environment                            |
-
----
-
-## Project Structure
+## 📁 Estructura del proyecto
 
 ```
-|   index.html
-|   README.md
-|   
-+---.vscode
-|       settings.json
-|       
-+---assets
-|   +---fonts
-|   |       CooperHewitt-Light.woff
-|   |       CooperHewitt-Thin.woff
-|   +---img
-|   |   |   icon-demoProyecto.webp
-|   |   |   icon-en.webp
-|   |   |   icon-github.webp
-|   |   |   icon-instagram.webp
-|   |   |   icon-linkedin.webp
-|   |   |   icon-spain.webp
-|   |   |   logo.webp
-|   |   |   programing-text.gif
-|   |   |   programing.gif
-|   |   +---company
-|   |   +---projects
-|   |   \---skills
-|   \---stylesheet
-|           desktop.css
-|           index.css
-|           loader.css
-|           tablet.css
-|
-+---data
-|       en.json
-|       es.json
-|       projects.json
-|
-\---js
-        main.js
-        projects.js
+portfolio-premium/
+├── index.html              # Página principal
+├── css/
+│   └── main.css            # Sistema de diseño completo
+├── js/
+│   └── main.js             # Lógica, animaciones e interacciones
+├── assets/
+│   ├── img/
+│   │   ├── projects/       # Imágenes de proyectos
+│   │   ├── skills/         # Íconos de habilidades
+│   │   └── company/        # Logos de empresas
+│   └── fonts/              # Fuentes locales (Cooper Hewitt)
+└── README.md
 ```
 
 ---
 
-## File Reference
+## ✨ Características
 
-### index.html
-Defines main site structure and includes all core sections, stylesheets, and scripts.
-
-### main.js
-Handles initial loading, language configuration, dynamic text loading, animations, and global application events.
-
-### projects.js
-Dynamically loads and renders project cards using data from `projects.json`.
-
-### CSS Files
-- **index.css:** Base styles and variables  
-- **desktop.css:** Styles for wide screens  
-- **tablet.css:** Styles for tablets & medium devices  
-- **loader.css:** Loading animations  
-
-### JSON Files
-- **es.json / en.json:** Translated user interface texts  
-- **projects.json:** List of portfolio projects (name, description, image, URL)
+| Feature | Detalle |
+|---|---|
+| **Dark Mode** | Paleta oscura sofisticada (#080808) con acento verde lima |
+| **Cursor personalizado** | Cursor seguidor con efecto blend-mode |
+| **Loader cinematográfico** | Animación de carga con barra de progreso |
+| **Hero animado** | Texto animado con stagger reveal |
+| **Marquee** | Banda de tecnologías con animación continua |
+| **Filtro de proyectos** | Full Stack / Frontend / CMS con transición |
+| **Reveal on scroll** | IntersectionObserver para revelar elementos |
+| **Barra de progreso** | Indicador de scroll en la parte superior |
+| **Formulario de contacto** | Con validación y feedback visual |
+| **Responsive premium** | Mobile-first con menú hamburger animado |
+| **Performance** | Lazy loading de imágenes, sin dependencias pesadas |
 
 ---
 
-## Execution Flow
+## 🎨 Sistema de diseño
 
-1. **Initialization:**  
-   Loads `index.html` and main CSS, then runs `main.js` after the DOMContentLoaded event.
-
-2. **Language Setup:**  
-   Default language is Spanish. Loads the appropriate localization file (`es.json` or `en.json`) and updates interface texts.
-
-3. **Content Rendering:**  
-   `projects.js` loads and displays portfolio projects dynamically as cards.
-
-4. **User Interaction:**  
-   Handles language switching, navigation, and section display.
-
-5. **Responsiveness:**  
-   Viewport-adaptive CSS for full compatibility.
-
----
-
-## Maintenance
-
-### Add a New Project
-
-1. Add the corresponding project image to `assets/img/projects/`
-2. Edit `data/projects.json` and insert a new project object:
-
+### Paleta de colores
+```css
+--c-bg:      #080808  /* Fondo principal */
+--c-accent:  #c8ff6e  /* Verde lima — color principal */
+--c-text:    #f0ede8  /* Texto principal */
+--c-text-2:  #888580  /* Texto secundario */
 ```
-{
-  "name": "New Project",
-  "description": "Short project description",
-  "image": "assets/img/projects/new.webp",
-  "url": "https://myproject.com"
+
+### Tipografía
+- **Display**: Syne (Google Fonts) — Headings, bold
+- **Body**: DM Sans (Google Fonts) — Texto, UI
+
+---
+
+## 🛠 Personalización
+
+### Cambiar información personal
+Edita las constantes en `js/main.js`:
+
+```javascript
+const PROJECTS = [ ... ]   // Tus proyectos
+const SKILLS   = [ ... ]   // Tus habilidades
+const EXPERIENCE = [ ... ] // Tu experiencia laboral
+```
+
+### Cambiar colores
+Edita las CSS variables en `css/main.css`:
+```css
+:root {
+  --c-accent: #c8ff6e;  /* Cambia el color de acento */
 }
 ```
-New projects are detected and shown automatically.
 
-### Add a New Language
-
-1. Create a corresponding JSON translation file (e.g., `fr.json`) in `/data`.  
-2. Add logic/option in `main.js` for language selection.
-
----
-
-## Author
-
-**Emanuel López**  
-Full Stack Developer  
-[Professional Portfolio](https://emadev.neuradevsoftware.com)  
-[contacto@neuradevsoftware.com](mailto:contacto@neuradevsoftware.com)
+### Agregar tu foto
+Reemplaza el bloque `.about-avatar-inner` en `index.html` con:
+```html
+<img src="./assets/img/tu-foto.jpg" alt="Emanuel López" style="width:100%;height:100%;object-fit:cover;">
+```
 
 ---
 
-## License
+## 📬 Contacto configurado
 
-© 2025. This document is part of the Web Portfolio technical documentation.  
-Reproduction is permitted with author attribution.
+El formulario está configurado para abrir el cliente de email. Para formulario funcional sin backend, considera:
+- **Formspree** (gratuito): `action="https://formspree.io/f/TU_ID"`
+- **EmailJS**: Integración JavaScript directa
+- **Netlify Forms**: Si despliegas en Netlify
+
+---
+
+## 🌐 Deploy
+
+### Vercel (recomendado)
+```bash
+npx vercel --prod
+```
+
+### Netlify
+Arrastra la carpeta a netlify.com/drop
+
+### GitHub Pages
+Sube el repositorio y activa Pages desde Settings
+
+---
+
+Diseñado y desarrollado con 💚 | Medellín, Colombia · 2026
