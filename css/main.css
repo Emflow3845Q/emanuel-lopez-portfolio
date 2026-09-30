@@ -922,6 +922,34 @@ section {
   background: var(--c-bg2);
 }
 
+.projects-notice {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+  padding: 12px 16px;
+  border: 1px solid var(--c-border2);
+  border-left: 2px solid var(--c-accent);
+  border-radius: 4px;
+  background: var(--c-accent-dim);
+}
+
+.projects-notice p {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--c-text-2);
+}
+
+.projects-notice-dot {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--c-accent);
+  box-shadow: 0 0 10px var(--c-glow);
+}
+
 .projects-filter {
   display: flex;
   gap: 8px;

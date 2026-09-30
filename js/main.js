@@ -155,14 +155,17 @@ const SKILLS = [
   { name: "CSS3", icon: "https://api.iconify.design/simple-icons:css3.svg?color=%23ffffff" },
   { name: "JavaScript", icon: "https://api.iconify.design/simple-icons:javascript.svg?color=%23ffffff" },
   { name: "React", icon: "https://api.iconify.design/simple-icons:react.svg?color=%23ffffff" },
+  { name: "Angular", icon: "https://api.iconify.design/simple-icons:angular.svg?color=%23ffffff" },
   { name: "TailwindCSS", icon: "https://api.iconify.design/simple-icons:tailwindcss.svg?color=%23ffffff" },
   { name: "Python", icon: "https://api.iconify.design/simple-icons:python.svg?color=%23ffffff" },
   { name: "PHP", icon: "https://api.iconify.design/simple-icons:php.svg?color=%23ffffff" },
+  { name: "Java", icon: "https://api.iconify.design/simple-icons:openjdk.svg?color=%23ffffff" },
   { name: "Laravel", icon: "https://api.iconify.design/simple-icons:laravel.svg?color=%23ffffff" },
   { name: "WordPress", icon: "https://api.iconify.design/simple-icons:wordpress.svg?color=%23ffffff" },
   { name: "Tiendanube", icon: "https://api.iconify.design/nimbus:tiendanube.svg?color=%23ffffff" },
   { name: "BigCommerce", icon: "https://api.iconify.design/simple-icons:bigcommerce.svg?color=%23ffffff" },
   { name: "Shopify", icon: "https://api.iconify.design/simple-icons:shopify.svg?color=%23ffffff" },
+  { name: "Power Platform", icon: "https://api.iconify.design/lucide:workflow.svg?color=%23ffffff" },
   { name: "Git", icon: "https://api.iconify.design/simple-icons:git.svg?color=%23ffffff" },
   { name: "GitHub", icon: "https://api.iconify.design/simple-icons:github.svg?color=%23ffffff" },
   { name: "Lua", icon: "https://api.iconify.design/simple-icons:lua.svg?color=%23ffffff" },
@@ -192,14 +195,14 @@ const EXPERIENCE = [
     logo: "https://res.cloudinary.com/dhoyps3vk/image/upload/v1773786788/isotipo-blanco-neuradev2026_wkewyc.png",
     role: "Full Stack Developer",
     period: "Diciembre 2024 — Presente",
-    desc: "Desarrollo soluciones digitales personalizadas, desde sitios CMS hasta aplicaciones completas. Trabajo con WordPress, APIs, chatbots y herramientas de terceros, además de gestionar dominios, DNS, correo corporativo, cPanel y WHM."
+    desc: "Desarrollo soluciones digitales personalizadas, desde sitios web hasta aplicaciones completas. Trabajo con múltiples lenguajes, APIs, chatbots y herramientas de terceros, además de gestionar dominios, DNS, correo corporativo, cPanel y WHM."
   },
   {
     company: "Xtrategic Publicidad Digital",
     logo: "./assets/img/company/xtrategic.webp",
     role: "Full Stack Freelance",
     period: "Enero 2025 — Junio 2026",
-    desc: "Desarrollo de soluciones digitales personalizadas con WordPress y software a medida. Implementación de APIs, chatbots, herramientas externas, SEO técnico, optimización de rendimiento y soporte completo hasta el lanzamiento."
+    desc: "Desarrollo de soluciones digitales personalizadas y software a medida. Implementación de APIs, chatbots, herramientas externas, SEO técnico, optimización de rendimiento y soporte completo hasta el lanzamiento."
   },
   {
     company: "LatinoAmérica Hosting",
@@ -232,14 +235,15 @@ const UI_TRANSLATIONS = {
     "nav.about": "Acerca de", "nav.skills": "Habilidades", "nav.experience": "Experiencia",
     "nav.projects": "Proyectos", "nav.contact": "Contacto", "nav.talk": "Hablemos",
     "hero.available": "[ disponible para proyectos ]",
-    "hero.role": "Desarrollo sitios WordPress, software personalizado y soluciones digitales completas. También gestiono cPanel, DNS, hosting, correo corporativo, APIs y chatbots. Con sede en <strong>Medellín, Colombia</strong>.",
+    "hero.role": "Desarrollo software personalizado, aplicaciones web y soluciones digitales completas con múltiples lenguajes y tecnologías. También gestiono cPanel, DNS, hosting, correo corporativo, APIs y chatbots. Con sede en <strong>Medellín, Colombia</strong>.",
     "hero.years": "años de experiencia", "hero.projects": "proyectos entregados", "hero.technologies": "tecnologías", "hero.projectsButton": "Ver proyectos", "hero.downloadCv": "Descargar CV", "hero.posterWord": "CREACIÓN<br><span>DIGITAL</span>", "hero.posterLabel": "IDEAS / SISTEMAS", "hero.scroll": "Desplazar",
     "about.label": "Sobre mí", "about.title": "Desarrollador<br>con visión<br>de producto.",
-    "about.text1": "Soy un desarrollador especializado en la <strong>colaboración en equipo</strong> y en la <strong>implementación de soluciones tecnológicas efectivas</strong>. Con experiencia tanto en trabajo colaborativo como en labores individuales, mi enfoque abarca desde CMS como WordPress y Joomla hasta frameworks modernos como React y Laravel.",
-    "about.text2": "Me apasiona crear sitios web que ofrezcan una <strong>experiencia de usuario excepcional</strong>: veloces, accesibles y con identidad visual fuerte. Cada proyecto es una oportunidad de construir algo que realmente funcione para las personas.",
+    "about.text1": "Soy un desarrollador especializado en la <strong>colaboración en equipo</strong> y en la <strong>implementación de soluciones tecnológicas efectivas</strong>. Con experiencia tanto en trabajo colaborativo como en labores individuales, trabajo con varios lenguajes y tecnologías: desde CMS como WordPress y Joomla, pasando por PHP, Python, JavaScript y Java, hasta frameworks modernos como React, Angular y Laravel, además de automatización con Power Platform.",
+    "about.text2": "Me apasiona crear soluciones digitales, desde sitios web hasta aplicaciones y sistemas, que ofrezcan una <strong>experiencia de usuario excepcional</strong>: veloces, accesibles y con identidad visual fuerte. Cada proyecto es una oportunidad de construir algo que realmente funcione para las personas.",
     "skills.label": "Stack", "skills.title": "Habilidades & Tecnologías",
     "experience.label": "Trayectoria", "experience.title": "Experiencia<br>Profesional",
     "projects.label": "Trabajo", "projects.title": "Proyectos<br>Seleccionados",
+    "projects.notice": "Aún no están todos los proyectos: estamos actualizando el sitio web.",
     "filters.all": "Todos", "filters.webapps": "Aplicaciones Web", "filters.corporate": "Corporativas", "filters.landing": "Landing Pages", "filters.ecommerce": "E-commerce", "filters.desktopApps": "Aplicaciones de Escritorio", "filters.maintenance": "Mantenimiento",
     "contact.label": "Contacto", "contact.title": "¿Trabajamos<br>juntos?",
     "contact.tagline": "Cuéntame qué necesitas<br>construir. <span>Hablamos hoy.</span>",
@@ -252,14 +256,15 @@ const UI_TRANSLATIONS = {
     "nav.about": "About", "nav.skills": "Skills", "nav.experience": "Experience",
     "nav.projects": "Projects", "nav.contact": "Contact", "nav.talk": "Let's talk",
     "hero.available": "[ available for projects ]",
-    "hero.role": "I build WordPress websites, custom software, and complete digital solutions. I also manage cPanel, DNS, hosting, corporate email, APIs, and chatbots. Based in <strong>Medellin, Colombia</strong>.",
+    "hero.role": "I build custom software, web applications, and complete digital solutions across multiple languages and technologies. I also manage cPanel, DNS, hosting, corporate email, APIs, and chatbots. Based in <strong>Medellin, Colombia</strong>.",
     "hero.years": "years of experience", "hero.projects": "projects delivered", "hero.technologies": "technologies", "hero.projectsButton": "View projects", "hero.downloadCv": "Download CV", "hero.posterWord": "DIGITAL<br><span>CRAFT</span>", "hero.posterLabel": "IDEAS / SYSTEMS", "hero.scroll": "Scroll",
     "about.label": "About me", "about.title": "Developer<br>with product<br>vision.",
-    "about.text1": "I am a developer focused on <strong>team collaboration</strong> and the <strong>delivery of effective technology solutions</strong>. My experience spans collaborative and independent work, from CMS platforms such as WordPress and Joomla to modern frameworks like React and Laravel.",
-    "about.text2": "I love building websites with an <strong>exceptional user experience</strong>: fast, accessible, and visually distinctive. Every project is an opportunity to create something that genuinely works for people.",
+    "about.text1": "I am a developer focused on <strong>team collaboration</strong> and the <strong>delivery of effective technology solutions</strong>. With experience in both collaborative and independent work, I work across several languages and technologies: from CMS platforms such as WordPress and Joomla, through PHP, Python, JavaScript, and Java, to modern frameworks like React, Angular, and Laravel, plus automation with Power Platform.",
+    "about.text2": "I love building digital solutions, from websites to applications and systems, with an <strong>exceptional user experience</strong>: fast, accessible, and visually distinctive. Every project is an opportunity to create something that genuinely works for people.",
     "skills.label": "Stack", "skills.title": "Skills & Technology",
     "experience.label": "Journey", "experience.title": "Professional<br>Experience",
     "projects.label": "Work", "projects.title": "Selected<br>Projects",
+    "projects.notice": "Not all projects are here yet: the website is being updated.",
     "filters.all": "All", "filters.webapps": "Web Applications", "filters.corporate": "Corporate Websites", "filters.landing": "Landing Pages", "filters.ecommerce": "E-commerce", "filters.desktopApps": "Desktop Applications", "filters.maintenance": "Maintenance",
     "contact.label": "Contact", "contact.title": "Shall we work<br>together?",
     "contact.tagline": "Tell me what you need to<br>build. <span>Let's talk today.</span>",
@@ -291,8 +296,8 @@ const PROJECT_EN = {
 };
 
 const EXPERIENCE_EN = {
-  "Neuradev Software": ["Full Stack Developer", "December 2024 — Present", "Building custom digital solutions from CMS websites to complete applications. Working with WordPress, APIs, chatbots, third-party tools, domains, DNS, corporate email, cPanel, and WHM."],
-  "Xtrategic Publicidad Digital": ["Full Stack Freelance", "January 2025 — June 2026", "Developing custom digital solutions with WordPress and bespoke software. Implementing APIs, chatbots, external tools, technical SEO, performance optimization, and full support through launch."],
+  "Neuradev Software": ["Full Stack Developer", "December 2024 — Present", "Building custom digital solutions from websites to complete applications. Working with multiple languages, APIs, chatbots, third-party tools, domains, DNS, corporate email, cPanel, and WHM."],
+  "Xtrategic Publicidad Digital": ["Full Stack Freelance", "January 2025 — June 2026", "Developing custom digital solutions and bespoke software. Implementing APIs, chatbots, external tools, technical SEO, performance optimization, and full support through launch."],
   "LatinoAmérica Hosting": ["Technical Support Specialist", "August 2022 — April 2024", "Managing hosting, domains, DNS, corporate email, SSL, cPanel, and WHM. Supporting WordPress, Joomla, PrestaShop, PHP, and MySQL, with troubleshooting, documentation, and user training."]
 };
 
