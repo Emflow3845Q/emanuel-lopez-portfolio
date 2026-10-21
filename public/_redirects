@@ -1,0 +1,2 @@
+# Cualquier ruta inexistente sirve index.html con estado 404; React pinta la página 404 (ver src/lib/notFound.ts).
+/*    /index.html   404
