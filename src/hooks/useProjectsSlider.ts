@@ -8,6 +8,9 @@ interface DragState {
   moved: boolean
   startX: number
   startScroll: number
+  currentScroll: number
+  clientWidth: number
+  maxScroll: number
 }
 
 /**
@@ -19,7 +22,15 @@ export function useProjectsSlider(pageCount: number, resetKey: unknown, enabled:
   const [page, setPage] = useState(0)
   const [dragging, setDragging] = useState(false)
   const scrollTimeout = useRef<number | undefined>(undefined)
-  const drag = useRef<DragState>({ active: false, moved: false, startX: 0, startScroll: 0 })
+  const drag = useRef<DragState>({
+    active: false,
+    moved: false,
+    startX: 0,
+    startScroll: 0,
+    currentScroll: 0,
+    clientWidth: 0,
+    maxScroll: 0,
+  })
 
   // biome-ignore lint/correctness/useExhaustiveDependencies: resetKey es un disparador intencional
   useEffect(() => {
@@ -32,9 +43,10 @@ export function useProjectsSlider(pageCount: number, resetKey: unknown, enabled:
   const goTo = useCallback(
     (index: number) => {
       const next = Math.max(0, Math.min(pageCount - 1, index))
-      setPage(next)
       const track = trackRef.current
-      track?.scrollTo({ left: next * track.clientWidth, behavior: 'smooth' })
+      const pageWidth = track?.clientWidth ?? 0
+      setPage(next)
+      track?.scrollTo({ left: next * pageWidth, behavior: 'smooth' })
     },
     [pageCount],
   )
@@ -67,7 +79,17 @@ export function useProjectsSlider(pageCount: number, resetKey: unknown, enabled:
     (event: PointerEvent<HTMLDivElement>) => {
       const track = trackRef.current
       if (!enabled || !track || event.pointerType !== 'mouse' || event.button !== 0) return
-      drag.current = { active: true, moved: false, startX: event.clientX, startScroll: track.scrollLeft }
+      const startScroll = track.scrollLeft
+      const clientWidth = track.clientWidth
+      drag.current = {
+        active: true,
+        moved: false,
+        startX: event.clientX,
+        startScroll,
+        currentScroll: startScroll,
+        clientWidth,
+        maxScroll: track.scrollWidth - clientWidth,
+      }
     },
     [enabled],
   )
@@ -82,7 +104,10 @@ export function useProjectsSlider(pageCount: number, resetKey: unknown, enabled:
       setDragging(true)
       track.setPointerCapture(event.pointerId)
     }
-    if (state.moved) track.scrollLeft = state.startScroll - delta
+    if (state.moved) {
+      state.currentScroll = Math.max(0, Math.min(state.maxScroll, state.startScroll - delta))
+      track.scrollLeft = state.currentScroll
+    }
   }, [])
 
   const endDrag = useCallback(
@@ -94,8 +119,8 @@ export function useProjectsSlider(pageCount: number, resetKey: unknown, enabled:
       if (!state.moved) return
       setDragging(false)
       if (track.hasPointerCapture(event.pointerId)) track.releasePointerCapture(event.pointerId)
-      const travelled = (state.startScroll - track.scrollLeft) / track.clientWidth // <0: hacia la derecha
-      const base = Math.round(state.startScroll / track.clientWidth)
+      const travelled = (state.startScroll - state.currentScroll) / state.clientWidth // <0: hacia la derecha
+      const base = Math.round(state.startScroll / state.clientWidth)
       if (travelled < -SWIPE_RATIO) goTo(base + 1)
       else if (travelled > SWIPE_RATIO) goTo(base - 1)
       else goTo(base)

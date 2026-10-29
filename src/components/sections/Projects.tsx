@@ -140,11 +140,16 @@ export function Projects() {
                 onClick={() => slider.goTo(i)}
                 aria-label={`${t.projects.goToPage} ${i + 1}`}
                 aria-current={i === slider.page}
-                className={cn(
-                  'h-2 rounded-full border-0 p-0 transition-[background,width] duration-300',
-                  i === slider.page ? 'w-[22px] bg-accent' : 'w-2 bg-line-2',
-                )}
-              />
+                className="grid size-6 shrink-0 place-items-center rounded-full border-0 bg-transparent p-0"
+              >
+                <span
+                  aria-hidden="true"
+                  className={cn(
+                    'block h-2 rounded-full transition-[background,width] duration-300',
+                    i === slider.page ? 'w-[22px] bg-accent' : 'w-2 bg-line-2',
+                  )}
+                />
+              </button>
             ))}
           </div>
           <span className="font-mono text-caption tracking-[0.04em] text-ink-3" aria-live="polite">

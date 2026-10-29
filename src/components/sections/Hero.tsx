@@ -1,7 +1,7 @@
 import { ArrowRight, Download } from 'lucide-react'
 import { useMotionTemplate, useMotionValue } from 'motion/react'
 import * as m from 'motion/react-m'
-import { type PointerEvent, useRef } from 'react'
+import { type PointerEvent, useCallback, useEffect, useRef } from 'react'
 import { site } from '@/data/site'
 import { useInViewport } from '@/hooks/useInViewport'
 import { useLanguage } from '@/i18n/LanguageContext'
@@ -13,6 +13,7 @@ import { HeroStats } from './HeroStats'
 export function Hero() {
   const { t, lang } = useLanguage()
   const ref = useRef<HTMLElement>(null)
+  const bounds = useRef<{ left: number; top: number; width: number; height: number } | null>(null)
   const onScreen = useInViewport(ref)
 
   // Cursor dentro del Hero: alimenta el foco de luz y el parallax del póster (solo con ratón).
@@ -23,11 +24,28 @@ export function Hero() {
   const spotOpacity = useMotionValue(0)
   const spotlight = useMotionTemplate`radial-gradient(520px circle at ${spotX}px ${spotY}px, var(--color-accent-dim), transparent 70%)`
 
+  const updateBounds = useCallback(() => {
+    const element = ref.current
+    if (!element) return
+    const rect = element.getBoundingClientRect()
+    bounds.current = {
+      left: rect.left + window.scrollX,
+      top: rect.top + window.scrollY,
+      width: rect.width,
+      height: rect.height,
+    }
+  }, [])
+
+  useEffect(() => {
+    window.addEventListener('resize', updateBounds)
+    return () => window.removeEventListener('resize', updateBounds)
+  }, [updateBounds])
+
   const onPointerMove = (event: PointerEvent<HTMLElement>) => {
-    if (event.pointerType !== 'mouse') return
-    const rect = event.currentTarget.getBoundingClientRect()
-    const x = event.clientX - rect.left
-    const y = event.clientY - rect.top
+    const rect = bounds.current
+    if (event.pointerType !== 'mouse' || !rect) return
+    const x = event.clientX + window.scrollX - rect.left
+    const y = event.clientY + window.scrollY - rect.top
     spotX.set(x)
     spotY.set(y)
     spotOpacity.set(1)
@@ -35,6 +53,7 @@ export function Hero() {
     pointerY.set(y / rect.height)
   }
   const onPointerLeave = () => {
+    bounds.current = null
     spotOpacity.set(0)
     pointerX.set(0.5)
     pointerY.set(0.5)
@@ -45,6 +64,7 @@ export function Hero() {
       ref={ref}
       id="hero"
       data-offscreen={!onScreen}
+      onPointerEnter={updateBounds}
       onPointerMove={onPointerMove}
       onPointerLeave={onPointerLeave}
       className="relative flex min-h-svh scroll-mt-14 items-center overflow-hidden px-gutter-wide max-md:block max-md:pb-12 max-md:pt-24 md:pb-[clamp(4.5rem,9vh,7rem)] md:pt-[clamp(5.5rem,11vh,8rem)]"

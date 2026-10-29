@@ -21,6 +21,18 @@ test.beforeEach(async ({ page }) => {
 })
 
 test.describe('general', () => {
+  test('el CSS principal está inlineado para no bloquear el primer render', async ({ page }) => {
+    const stylesheetRequests: string[] = []
+    page.on('request', (request) => {
+      if (/\.css(?:\?|$)/.test(request.url())) stylesheetRequests.push(request.url())
+    })
+
+    await page.goto('/')
+    await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
+    await expect(page.locator('style')).toHaveCount(1)
+    expect(stylesheetRequests).toEqual([])
+  })
+
   test('carga sin errores de consola y con el título en español', async ({ page }) => {
     const errors: string[] = []
     page.on('pageerror', (e) => errors.push(e.message))
@@ -178,6 +190,27 @@ test.describe('proyectos', () => {
     await expect(page.getByRole('button', { name: 'Siguientes proyectos' })).toBeDisabled()
     // La primera página queda inerte: sus tarjetas no reciben foco.
     await expect(page.locator('#projects [inert]').first()).toBeAttached()
+  })
+
+  test('los indicadores de página tienen áreas táctiles de al menos 24 px y separación', async ({ page }) => {
+    await page.goto('/')
+    await page.locator('#projects').scrollIntoViewIfNeeded()
+    const indicators = page.getByRole('button', { name: /^Ir a la página \d+$/ })
+    const boxes = await indicators.evaluateAll((buttons) =>
+      buttons.map((button) => {
+        const { x, y, width, height } = button.getBoundingClientRect()
+        return { x, y, width, height }
+      }),
+    )
+
+    expect(boxes.length).toBeGreaterThan(1)
+    for (const box of boxes) {
+      expect(box.width).toBeGreaterThanOrEqual(24)
+      expect(box.height).toBeGreaterThanOrEqual(24)
+    }
+    for (let i = 1; i < boxes.length; i++) {
+      expect(boxes[i].x - (boxes[i - 1].x + boxes[i - 1].width)).toBeGreaterThanOrEqual(8)
+    }
   })
 
   test('el carrusel se puede arrastrar con el ratón', async ({ page }) => {
