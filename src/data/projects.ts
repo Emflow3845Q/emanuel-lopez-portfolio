@@ -147,16 +147,25 @@ export const projects: Project[] = [
     slug: 'smart-ppc-bidding',
     image: `${CDN}/smartppcbidding_lzibhp.png`,
     demo: 'https://www.smartppcbidding.com',
-    tags: ['WordPress', 'Elementor Pro'],
+    tags: [
+      'WordPress',
+      'Elementor Pro',
+      'LiteSpeed Cache',
+      'Contact Form 7',
+      'Google Site Kit',
+      'GTM Kit',
+      'PHP',
+      'MySQL / MariaDB',
+    ],
     category: 'corporate',
     text: {
       es: {
         title: 'Smart PPC Bidding',
-        desc: 'Sitio corporativo para una agencia de marketing digital y PPC de Miami, desarrollado con Elementor Pro sobre WordPress. Presenta sus servicios de Google Ads, desarrollo web y redes sociales, el proceso de trabajo y casos de estudio, con la llamada telefónica como conversión principal y el formulario de contacto dentro del hero.',
+        desc: 'Sitio corporativo para una agencia de marketing digital y PPC de Miami, desarrollado con Elementor Pro sobre WordPress. Presenta sus servicios de Google Ads, desarrollo web y redes sociales, el proceso de trabajo y casos de estudio. Integra LiteSpeed Cache, Contact Form 7, Google Site Kit y GTM Kit para rendimiento, formularios y medición.',
       },
       en: {
         title: 'Smart PPC Bidding',
-        desc: 'Corporate website for a Miami digital marketing and PPC agency, built with Elementor Pro on WordPress. It presents its Google Ads, web development, and social media services, its process, and case studies, with the phone call as the main conversion and the contact form inside the hero.',
+        desc: 'Corporate website for a Miami digital marketing and PPC agency, built with Elementor Pro on WordPress. It presents its Google Ads, web development, and social media services, its process, and case studies. It integrates LiteSpeed Cache, Contact Form 7, Google Site Kit, and GTM Kit for performance, forms, and measurement.',
       },
     },
   },
@@ -221,6 +230,7 @@ export const projects: Project[] = [
     slug: 'sistema-clientes',
     image: null, // TODO: URL de Cloudinary
     demo: 'https://clientes.neuradevsoftware.com',
+    status: 'in-development',
     tags: ['React', 'Node.js', 'MongoDB', 'Material UI', 'JWT', 'Google OAuth'],
     category: 'webapps',
     text: {
@@ -275,16 +285,16 @@ export const projects: Project[] = [
     slug: 'aps',
     image: `${CDN}/v1769846087/apsbest_pa1ci5.png`,
     demo: 'https://apsbest.com',
-    tags: ['WordPress', 'Elementor'],
+    tags: ['WordPress', 'Elementor Pro', 'PHP', 'MySQL / MariaDB', 'LiteSpeed Cache', 'Yoast SEO', 'Google Site Kit'],
     category: 'corporate',
     text: {
       es: {
         title: 'APS Atlantic Pacific Standard',
-        desc: 'Sitio corporativo para un contratista general. Renueva su presencia digital destacando servicios, proyectos y certificaciones; desarrollado en colaboración con Smart PPC Bidding.',
+        desc: 'Sitio corporativo desarrollado en WordPress y maquetado con Elementor Pro para un contratista general. Presenta sus servicios de construcción, proyectos y certificaciones. Incluye LiteSpeed Cache para optimización, Yoast SEO y Google Site Kit; desarrollado en colaboración con Smart PPC Bidding.',
       },
       en: {
         title: 'APS Atlantic Pacific Standard',
-        desc: 'Corporate website for a general contractor that renews its digital presence around services, projects, and certifications. Built in collaboration with Smart PPC Bidding.',
+        desc: 'Corporate website built with WordPress and Elementor Pro for a general contractor. It presents construction services, projects, and certifications, and uses LiteSpeed Cache for optimization, Yoast SEO, and Google Site Kit. Built in collaboration with Smart PPC Bidding.',
       },
     },
   },
@@ -311,16 +321,16 @@ export const projects: Project[] = [
     slug: 'general-lift',
     image: `${CDN}/generalliftna_n5bd9q.png`,
     demo: 'https://generalliftna.com',
-    tags: ['E-commerce'],
+    tags: ['WordPress', 'Elementor Pro', 'WooCommerce', 'LiteSpeed Cache', 'PHP', 'MySQL / MariaDB'],
     category: 'ecommerce',
     text: {
       es: {
         title: 'General Lift',
-        desc: 'Tienda en línea de montacargas, transpaletas, apiladores y otros equipos de manejo de materiales. Catálogo por categorías y marcas, con información de financiamiento y garantía extendida.',
+        desc: 'Tienda en línea desarrollada en WordPress con WooCommerce y diseñada con Elementor Pro. Usa LiteSpeed Cache para optimización y presenta montacargas, transpaletas, apiladores y otros equipos de manejo de materiales en un catálogo organizado por categorías y marcas, además de información de financiamiento y garantía extendida.',
       },
       en: {
         title: 'General Lift',
-        desc: 'Online store for forklifts, pallet jacks, stackers, and other material-handling equipment. Catalog by category and brand, with financing and extended warranty information.',
+        desc: 'Online store built with WordPress and WooCommerce and designed with Elementor Pro. It uses LiteSpeed Cache for optimization and presents forklifts, pallet jacks, stackers, and other material-handling equipment in a catalog organized by category and brand, along with financing and extended warranty information.',
       },
     },
   },
@@ -347,16 +357,27 @@ export const projects: Project[] = [
     slug: 'tesista-latam',
     image: `${CDN}/v1752452429/landing-tesistas_ocfnon.webp`,
     demo: 'https://comunidadtesistadelatinoamerica.com/convocatoria-asesores-academicos',
-    tags: ['Landing Page'],
+    tags: [
+      'WordPress',
+      'Elementor Pro',
+      'LiteSpeed Cache',
+      'Yoast SEO',
+      'Google Site Kit',
+      'PixelYourSite',
+      'Post SMTP',
+      'Burst Statistics',
+      'PHP',
+      'MySQL / MariaDB',
+    ],
     category: 'landing',
     text: {
       es: {
         title: 'Comunidad Tesista LATAM — Convocatoria de Asesores',
-        desc: 'Diseño y optimización de la landing de convocatoria de asesores académicos de la comunidad. Comunica con claridad el perfil buscado y facilita las postulaciones.',
+        desc: 'Landing page de convocatoria para asesores académicos, construida en WordPress con Elementor Pro. Presenta la propuesta para unirse al equipo y facilita conocer el perfil de la convocatoria. El sitio integra LiteSpeed Cache, Yoast SEO, Google Site Kit, PixelYourSite, Post SMTP y Burst Statistics.',
       },
       en: {
         title: 'Comunidad Tesista LATAM — Advisor Recruitment',
-        desc: 'Design and optimization of the community’s academic advisor recruitment landing page. It states the profile sought clearly and makes applying easier.',
+        desc: 'Academic advisor recruitment landing page built with WordPress and Elementor Pro. It presents the opportunity to join the team and makes the role requirements easy to explore. The site integrates LiteSpeed Cache, Yoast SEO, Google Site Kit, PixelYourSite, Post SMTP, and Burst Statistics.',
       },
     },
   },
