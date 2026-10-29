@@ -1,6 +1,25 @@
-import { skillGroups } from '@/data/skills'
+import type { IconType } from 'react-icons'
+import {
+  SiCpanel,
+  SiJavascript,
+  SiNodedotjs,
+  SiPython,
+  SiReact,
+  SiTailwindcss,
+  SiTypescript,
+  SiWordpress,
+} from 'react-icons/si'
 
-const items = skillGroups.flatMap((group) => group.skills).filter((skill) => skill.core)
+const items: { name: string; icon: IconType }[] = [
+  { name: 'React', icon: SiReact },
+  { name: 'JavaScript', icon: SiJavascript },
+  { name: 'TypeScript', icon: SiTypescript },
+  { name: 'Tailwind CSS', icon: SiTailwindcss },
+  { name: 'Node.js', icon: SiNodedotjs },
+  { name: 'Python', icon: SiPython },
+  { name: 'WordPress', icon: SiWordpress },
+  { name: 'cPanel', icon: SiCpanel },
+]
 
 /** Cinta infinita decorativa con las tecnologías principales (el detalle está en la sección Habilidades). */
 export function TechMarquee() {

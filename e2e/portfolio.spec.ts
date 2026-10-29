@@ -74,9 +74,18 @@ test.describe('general', () => {
   })
 
   test('el menú marca la sección activa al hacer scroll', async ({ page }) => {
+    const skillGridRequests: string[] = []
+    page.on('request', (request) => {
+      if (/SkillsGrid-[^/]+\.js/.test(request.url())) skillGridRequests.push(request.url())
+    })
+
     await page.goto('/')
+    expect(skillGridRequests).toEqual([])
+    await expect(page.locator('#skills-frontend')).toHaveCount(0)
     await page.locator('#skills').scrollIntoViewIfNeeded()
     await page.evaluate(() => document.getElementById('skills')?.scrollIntoView())
+    await expect(page.locator('#skills-frontend')).toBeVisible()
+    await expect.poll(() => skillGridRequests.length).toBeGreaterThan(0)
     await expect(page.getByRole('link', { name: 'Habilidades' }).first()).toHaveAttribute('aria-current', 'true')
   })
 })
@@ -107,6 +116,7 @@ test.describe('página 404', () => {
 test.describe('formación', () => {
   test('muestra la formación y los certificados, y cambia de idioma', async ({ page }) => {
     await page.goto('/')
+    await page.locator('a[href="#experience"]').first().click()
     const heading = page.getByRole('heading', { name: 'Formación y certificaciones' })
     await heading.scrollIntoViewIfNeeded()
     await expect(heading).toBeVisible()
@@ -141,6 +151,7 @@ test.describe('CV', () => {
 test.describe('proyectos', () => {
   test('el filtro reduce la lista y "Todos" la restaura', async ({ page }) => {
     await page.goto('/')
+    await page.locator('a[href="#projects"]').first().click()
     const cards = page.locator('#projects article')
     await expect(cards).toHaveCount(TOTAL_PROJECTS)
     await page.getByRole('button', { name: 'E-commerce', exact: true }).click()
@@ -151,7 +162,7 @@ test.describe('proyectos', () => {
 
   test('abrir un proyecto actualiza la URL; Escape y "atrás" lo cierran', async ({ page }) => {
     await page.goto('/')
-    await page.locator('#projects').scrollIntoViewIfNeeded()
+    await page.locator('a[href="#projects"]').first().click()
     await page.getByRole('button', { name: /Ver descripción de Otto/ }).click()
     const dialog = page.getByRole('dialog')
     await expect(dialog).toBeVisible()
@@ -178,7 +189,7 @@ test.describe('proyectos', () => {
 
   test('el carrusel avanza de página y deshabilita lo que queda fuera de vista', async ({ page }) => {
     await page.goto('/')
-    await page.locator('#projects').scrollIntoViewIfNeeded()
+    await page.locator('a[href="#projects"]').first().click()
     await expect(page.getByText(pageLabel(1))).toBeVisible()
     await page.getByRole('button', { name: 'Siguientes proyectos' }).click()
     await expect(page.getByText(pageLabel(2))).toBeVisible()
@@ -194,8 +205,9 @@ test.describe('proyectos', () => {
 
   test('los indicadores de página tienen áreas táctiles de al menos 24 px y separación', async ({ page }) => {
     await page.goto('/')
-    await page.locator('#projects').scrollIntoViewIfNeeded()
+    await page.locator('a[href="#projects"]').first().click()
     const indicators = page.getByRole('button', { name: /^Ir a la página \d+$/ })
+    await expect(indicators.first()).toBeVisible()
     const boxes = await indicators.evaluateAll((buttons) =>
       buttons.map((button) => {
         const { x, y, width, height } = button.getBoundingClientRect()
@@ -215,7 +227,7 @@ test.describe('proyectos', () => {
 
   test('el carrusel se puede arrastrar con el ratón', async ({ page }) => {
     await page.goto('/')
-    await page.locator('#projects').scrollIntoViewIfNeeded()
+    await page.locator('a[href="#projects"]').first().click()
     const track = page.getByRole('region', { name: 'Carrusel de proyectos' })
     const box = await track.boundingBox()
     if (!box) throw new Error('Carrusel sin dimensiones')
@@ -230,7 +242,7 @@ test.describe('proyectos', () => {
 
   test('el carrusel responde a las flechas del teclado', async ({ page }) => {
     await page.goto('/')
-    await page.locator('#projects').scrollIntoViewIfNeeded()
+    await page.locator('a[href="#projects"]').first().click()
     await page.getByRole('region', { name: 'Carrusel de proyectos' }).focus()
     await page.keyboard.press('ArrowRight')
     await expect(page.getByText(pageLabel(2))).toBeVisible()
@@ -242,6 +254,7 @@ test.describe('proyectos', () => {
 test.describe('formulario de contacto', () => {
   test('muestra errores por campo y enfoca el primero inválido', async ({ page }) => {
     await page.goto('/')
+    await page.locator('a[href="#contact"]').first().click()
     await page.getByRole('button', { name: 'Enviar mensaje' }).click()
     await expect(page.getByRole('alert').filter({ hasText: 'obligatorio' })).toHaveCount(4)
     await expect(page.getByLabel('Nombre')).toBeFocused()
@@ -250,6 +263,7 @@ test.describe('formulario de contacto', () => {
 
   test('valida el formato del correo y la longitud del mensaje', async ({ page }) => {
     await page.goto('/')
+    await page.locator('a[href="#contact"]').first().click()
     await page.getByLabel('Nombre').fill('Ana')
     await page.getByLabel('Email').fill('no-es-correo')
     await page.getByLabel('Asunto').fill('Hola')
@@ -261,6 +275,7 @@ test.describe('formulario de contacto', () => {
 
   test('envía correctamente y muestra el panel de confirmación sin bloquear la página', async ({ page }) => {
     await page.goto('/')
+    await page.locator('a[href="#contact"]').first().click()
     await page.getByLabel('Nombre').fill('Ana')
     await page.getByLabel('Email').fill('ana@ejemplo.com')
     await page.getByLabel('Asunto').fill('Proyecto')
@@ -279,6 +294,7 @@ test.describe('formulario de contacto', () => {
     await page.unroute('**/')
     await stubNetwork(page, 500)
     await page.goto('/')
+    await page.locator('a[href="#contact"]').first().click()
     await page.getByLabel('Nombre').fill('Ana')
     await page.getByLabel('Email').fill('ana@ejemplo.com')
     await page.getByLabel('Asunto').fill('Proyecto')
@@ -304,6 +320,8 @@ test.describe('móvil', () => {
 
   test('los proyectos se muestran en lista (sin carrusel)', async ({ page }) => {
     await page.goto('/')
+    await page.getByRole('button', { name: 'Abrir menú' }).click()
+    await page.locator('#mobile-menu').getByRole('link', { name: 'Proyectos' }).click()
     await expect(page.getByRole('region', { name: 'Carrusel de proyectos' })).toHaveCount(0)
     await expect(page.locator('#projects article')).toHaveCount(TOTAL_PROJECTS)
   })
